@@ -1,0 +1,3253 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社ロイヤルエクスペリエンス - マーケティング支援・AI支援・インバウンド富裕層×地方創生事業。代表：清水耕太郎。かちづくりカンパニー。">
+  <meta name="keywords" content="マーケティング支援,AI支援,インバウンド,地方創生,四国遍路,瀬戸内,ロイヤルエクスペリエンス,清水耕太郎">
+  <meta property="og:title" content="インバウンド富裕層＆AIマーケティング｜ロイヤルエクスペリエンス">
+  <meta property="og:description" content="企業や地方の課題解決をマーケティングとAIの力で支援。「ものづくり」の強みを、マーケティングで磨き上げて「価値」に変える。私たちは、付加価値を生み出すマーケティング＆プロデュースカンパニーです。AIからDXからインバウンド富裕層まで、あらゆる課題解決に伴走します。">
+  <meta property="og:url" content="https://loyalx.co.jp">
+  <meta property="og:type" content="website">
+  <title>マーケティングとAIでインバウンド×地方創生｜ロイヤルエクスペリエンス</title>
+  <link rel="icon" type="image/png" href="images/LX_logo.png">
+  <link rel="shortcut icon" href="images/LX_logo.png">
+
+  <!-- ===== Google Tag Manager (HEAD) ===== -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZC95HBQ');</script>
+  <!-- ===== End Google Tag Manager ===== -->
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-deep': '#060E22',
+            'navy':      '#0d1b3e',
+            'navy-mid':  '#162144',
+            'gold':      '#A89274',
+            'gold-lt':   '#C0AA8C',
+            'cream':     '#F4F0EA',
+            'warm-wh':   '#fdfaf7',
+          },
+          fontFamily: {
+            'serif-en': ['"Cormorant Garamond"', 'serif'],
+            'serif-jp': ['"Noto Serif JP"', 'serif'],
+            'sans-jp':  ['"Noto Sans JP"', 'sans-serif'],
+            'sans-en':  ['Montserrat', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fdfaf6;
+      color: #1c1c1c;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #05091a; }
+    ::-webkit-scrollbar-thumb { background: #A89274; border-radius: 2px; }
+
+    /* ─── Header ─────────────────────────────────────────── */
+    #header {
+      transition: background 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+    #header.scrolled {
+      background: rgba(5,9,26,0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 rgba(168,146,116,0.22);
+      border-bottom-color: rgba(168,146,116,0.15);
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: #A89274;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ─── Mobile Hero: first view optimization ─────────── */
+    @media (max-width: 767px) {
+      /* Body copy: font -0.05rem (avoid clamp min going below 0.85) */
+      .hero-section .font-sans-jp {
+        font-size: clamp(0.82rem, 3.5vw, 0.95rem) !important;
+        line-height: 1.85 !important;
+      }
+      /* Hero: start content from top, pickup card falls below fold */
+      .hero-section {
+        align-items: flex-start !important;
+        padding-top: 9rem !important;   /* header height + generous breathing room */
+        padding-bottom: 0 !important;
+        min-height: 100svh;
+      }
+      /* Make .max-w-3xl a flex column taller than viewport; pickup pushed below fold */
+      .hero-section > .relative > .max-w-3xl {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        min-height: calc(100svh - 9rem) !important;
+        padding-bottom: 2.5rem;
+      }
+      /* Pickup card: margin-top:auto pushes it to bottom of oversized container */
+      .pickup-fv {
+        margin-top: auto !important;
+        padding-top: 2.5rem;
+      }
+      /* H1 a little tighter on mobile */
+      .hero-section h1 {
+        font-size: clamp(1.85rem, 8.5vw, 3rem) !important;
+        margin-bottom: 1.25rem !important;
+      }
+      /* gold line shorter on mobile */
+      .hero-section .gold-line-left { margin-bottom: 1.25rem !important; }
+      /* body paragraph less margin */
+      .hero-section .mb-12 { margin-bottom: 0 !important; }
+
+      /* Mobile hero: center alignment */
+      .hero-section .section-label { display: none !important; }
+      .hero-section > .relative > .max-w-3xl { text-align: center !important; }
+      .hero-section .gold-line-left { display: none !important; }
+      /* hide second body sentence on mobile */
+      .hero-copy-sp-hide { display: none !important; }
+      /* hide pickup card label + sub on mobile */
+      .pickup-label { display: none !important; }
+      .pickup-sub   { display: none !important; }
+      /* center pickup card on mobile */
+      .pickup-fv > p { text-align: center !important; }
+      .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 340px !important; }
+      /* 生み出す の後で改行 — mobile only */
+      .sp-br { display: block !important; }
+      /* Hero body copy: force center + remove max-width cap on mobile */
+      .hero-section > .relative > .max-w-3xl p { text-align: center !important; max-width: 100% !important; }
+    }
+
+    /* ─── Prevent mid-CJK word breaks in headings ────── */
+    .font-serif-jp { word-break: keep-all; }
+    /* Mobile-only line break — hidden by default on desktop */
+    .sp-br { display: none; }
+
+    /* ─── Scroll offset for fixed header ────────────────── */
+    html { scroll-padding-top: 88px; }
+    section[id]:not(#hero) { scroll-margin-top: 88px; }
+
+    /* ─── Hero ───────────────────────────────────────────── */
+    .hero-section {
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 7rem;   /* clears fixed header ~88px + breathing room */
+      padding-bottom: 14rem;
+      background: linear-gradient(135deg, #091826 0%, #132542 45%, #1E3360 100%);
+      overflow: hidden;
+    }
+    /* hero background image layer (replace assets/images/hero.jpg) */
+    .hero-bg-img {
+      position: absolute; inset: 0;
+      background: url('images/hero.jpg') center/cover no-repeat, url('assets/images/hero.jpg') center/cover no-repeat;
+      opacity: 0.22;
+      transition: opacity 0.5s;
+    }
+    /* hero YouTube video background */
+    .hero-video-bg {
+      position: absolute; inset: 0;
+      overflow: hidden; pointer-events: none;
+      z-index: 0;
+    }
+    .hero-video-bg iframe {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 100vw;
+      height: 56.25vw;   /* 16:9 aspect ratio */
+      min-height: 100%;
+      min-width: 177.78vh; /* 16:9 aspect ratio */
+      transform: translate(-50%, -50%);
+      opacity: 0.38;
+    }
+    /* gradient overlay */
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(3,8,16,0.05) 0%,
+        rgba(3,8,16,0.25) 55%,
+        rgba(3,8,16,0.72) 100%
+      );
+    }
+    /* decorative dots grid */
+    .hero-dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(168,146,116,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    /* decorative radial glow */
+    .hero-glow {
+      position: absolute;
+      width: 60vw; height: 60vw;
+      max-width: 900px; max-height: 900px;
+      background: radial-gradient(circle, rgba(168,146,116,0.07) 0%, transparent 70%);
+      top: 50%; right: -10%;
+      transform: translateY(-50%);
+    }
+
+    /* ─── Gold Lines & Dividers ──────────────────────────── */
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168,146,116,0.6), transparent);
+    }
+    .gold-line-left {
+      display: inline-block;
+      width: 48px; height: 1px;
+      background: #A89274;
+    }
+    .section-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #A89274;
+    }
+
+    /* ─── Marquee ────────────────────────────────────────── */
+    .marquee-wrap { overflow: hidden; }
+    .marquee-track {
+      display: flex;
+      gap: 2.5rem;
+      animation: marqueeLoop 28s linear infinite;
+      width: max-content;
+    }
+    @keyframes marqueeLoop {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── Cards & Hover ──────────────────────────────────── */
+    .svc-card {
+      transition: transform 0.38s ease, box-shadow 0.38s ease, border-color 0.38s ease;
+      border: 1px solid transparent;
+    }
+    .svc-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(168,146,116,0.35);
+      box-shadow: 0 24px 60px rgba(168,146,116,0.06);
+    }
+
+    /* experience (inbound) card image */
+    .exp-card { position: relative; overflow: hidden; }
+    .exp-card .card-img-wrap { overflow: hidden; height: 280px; }
+    .exp-card .card-img-wrap img,
+    .exp-card .card-img-wrap .img-fallback {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+    .exp-card:hover .card-img-wrap img,
+    .exp-card:hover .card-img-wrap .img-fallback { transform: scale(1.06); }
+    .exp-card .card-img-wrap .img-fallback {
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #0d1b3e, #162144);
+    }
+
+    /* ─── Reveal on scroll ───────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .rev-d1 { transition-delay: 0.10s; }
+    .rev-d2 { transition-delay: 0.20s; }
+    .rev-d3 { transition-delay: 0.30s; }
+    .rev-d4 { transition-delay: 0.40s; }
+
+    /* ─── Company table ──────────────────────────────────── */
+    .co-table tr { border-bottom: 1px solid #e8e0d5; }
+    .co-table td { padding: 14px 0; vertical-align: top; font-size: 0.875rem; }
+    .co-table td:first-child {
+      color: #888; width: 38%;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      padding-right: 1rem;
+    }
+
+    /* ─── Mobile Menu ────────────────────────────────────── */
+    #mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(3,8,16,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 998;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.25rem;
+    }
+    #mobile-menu.open { display: flex; }
+
+    /* ─── Back to top ────────────────────────────────────── */
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 44px; height: 44px;
+      background: #A89274;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 100;
+    }
+    #back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+    /* ─── Stat numbers ───────────────────────────────────── */
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: #A89274;
+      line-height: 1;
+    }
+
+    /* ─── Profile card ───────────────────────────────────── */
+    .profile-initials {
+      width: 120px; height: 160px;
+      background: linear-gradient(135deg, #0d1b3e 0%, #162144 100%);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ─── Tag pill ───────────────────────────────────────── */
+    .tag-pill {
+      border: 1px solid rgba(168,146,116,0.4);
+      color: #A89274;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      padding: 4px 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      display: inline-block;
+    }
+
+    /* ─── Video showcase (Business 02) ──────────────────── */
+    .video-showcase-wrap { position: relative; overflow: hidden; background: #05091a; }
+    .video-aspect { position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; }
+    .video-aspect iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: none;
+    }
+    /* Thumbnail + play button (lazy-load) */
+    .video-thumb {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      cursor: pointer; overflow: hidden;
+    }
+    .video-thumb img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      filter: brightness(0.82);
+    }
+    .video-thumb:hover img { transform: scale(1.03); filter: brightness(0.65); }
+    .video-play-btn {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px; height: 68px;
+      background: rgba(168,146,116,0.92);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.38);
+      pointer-events: none;
+    }
+    .video-thumb:hover .video-play-btn {
+      background: rgba(168,146,116,1);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .video-play-btn svg { margin-left: 5px; }
+    .video-caption {
+      padding: 1.1rem 1.25rem 1.25rem;
+      background: #0d1b3e;
+      border-top: 1px solid rgba(168,146,116,0.2);
+    }
+
+    /* ─── Client name grid (Business 01) ────────────────── */
+    .client-grid {
+      display: flex; flex-wrap: wrap;
+      gap: 0.9rem 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .client-pill {
+      padding: 0.5rem 1.1rem;
+      border: 1px solid rgba(168,146,116,0.22);
+      background: rgba(255,255,255,0.03);
+      display: flex; flex-direction: column;
+      gap: 0.15rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .client-pill:hover {
+      border-color: rgba(168,146,116,0.5);
+      background: rgba(168,146,116,0.05);
+    }
+    .client-name {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.88rem; font-weight: 400;
+      color: rgba(255,255,255,0.72); line-height: 1.3;
+    }
+    .client-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem; letter-spacing: 0.12em;
+      color: rgba(168,146,116,0.55); line-height: 1;
+    }
+
+    /* ─── Scroll indicator ───────────────────────────────── */
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+    .scroll-indicator { animation: scrollBounce 2s ease-in-out infinite; }
+
+    /* ─── Clickable exp-card ─────────────────────────────── */
+    .exp-card-clickable { cursor: pointer; }
+    .exp-card-clickable .card-cta-strip {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1.1rem;
+      background: #0d1b3e;
+      transition: background 0.3s;
+    }
+    .exp-card-clickable:hover .card-cta-strip { background: #162144; }
+    .exp-card-clickable .card-cta-strip span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem; letter-spacing: 0.26em;
+      text-transform: uppercase;
+    }
+
+    /* ─── Tour Modal Overlay ─────────────────────────────── */
+    .tour-modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(3,8,16,0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+    .tour-modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .tour-modal-box {
+      background: #fdfaf6;
+      width: 100%; max-width: 780px;
+      margin: auto;
+      position: relative;
+    }
+    .tour-modal-hero {
+      height: 240px;
+      background: linear-gradient(135deg, #0d1b3e 0%, #162144 100%);
+      overflow: hidden; position: relative;
+    }
+    .tour-modal-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.42; }
+    .tour-modal-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(5,9,26,0.05) 0%, rgba(5,9,26,0.72) 100%);
+      display: flex; align-items: flex-end; padding: 1.75rem 2rem;
+    }
+    .tour-modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 38px; height: 38px;
+      background: rgba(5,9,26,0.65); border: none; cursor: pointer;
+      color: rgba(255,255,255,0.8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; transition: background 0.3s; z-index: 2;
+    }
+    .tour-modal-close:hover { background: #A89274; color: #05091a; }
+    .tour-modal-body { padding: 2rem 2.25rem 2.5rem; }
+    @media (max-width: 520px) { .tour-modal-body { padding: 1.5rem 1.25rem 2rem; } }
+    .modal-section-title {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.64rem; letter-spacing: 0.32em;
+      text-transform: uppercase; color: #A89274; margin-bottom: 0.9rem;
+    }
+    .modal-divider { height: 1px; background: #e8e0d5; margin: 1.75rem 0; }
+    .modal-point {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 0.85rem 0; border-bottom: 1px solid #f0ebe4;
+    }
+    .modal-point:last-child { border-bottom: none; }
+    .modal-point-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 300; color: #A89274;
+      line-height: 1.1; flex-shrink: 0; width: 1.75rem;
+    }
+    .modal-point-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.88rem; font-weight: 600; color: #0d1b3e;
+      margin-bottom: 0.2rem;
+    }
+    .modal-point-desc {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.8rem; font-weight: 300; color: #666; line-height: 1.75;
+    }
+    .itinerary-day {
+      display: grid; grid-template-columns: 4.5rem 1fr;
+      gap: 0 0.9rem; padding: 0.65rem 0;
+      border-bottom: 1px solid #f0ebe4;
+    }
+    .itinerary-day:last-child { border-bottom: none; }
+    .itinerary-day-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: #A89274; padding-top: 0.15rem;
+    }
+    .itinerary-day-content {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.8rem; font-weight: 300; color: #444; line-height: 1.75;
+    }
+    .incl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 560px) { .incl-grid { grid-template-columns: 1fr; } }
+    .incl-item {
+      display: flex; align-items: flex-start; gap: 0.55rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.78rem; font-weight: 300; color: #555; line-height: 1.65;
+      padding: 0.3rem 0;
+    }
+    .incl-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 0.45rem; }
+    .incl-dot-yes { background: #A89274; }
+    .incl-dot-no  { background: #ccc; }
+    .modal-other-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.82rem; font-weight: 300; color: #555; line-height: 1.9;
+    }
+
+    /* ─── Inquiry Modal ──────────────────────────────────── */
+    .inquiry-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(3,8,16,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 1001;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+    .inquiry-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .inquiry-box {
+      background: #fdfaf6;
+      width: 100%; max-width: 640px;
+      margin: auto; position: relative;
+      padding: 2.5rem 2.25rem 2rem;
+    }
+    @media (max-width: 520px) { .inquiry-box { padding: 2rem 1.25rem 1.5rem; } }
+    .inquiry-close {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      width: 36px; height: 36px;
+      background: rgba(5,9,26,0.07); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: #666; transition: background 0.3s;
+    }
+    .inquiry-close:hover { background: rgba(168,146,116,0.25); }
+    .inq-label {
+      display: block;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.77rem; font-weight: 500; color: #444; margin-bottom: 0.35rem;
+    }
+    .inq-input, .inq-select, .inq-textarea {
+      width: 100%; padding: 0.68rem 0.9rem;
+      border: 1px solid #ddd; background: #fff;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.875rem; color: #333; outline: none;
+      transition: border-color 0.3s; border-radius: 0;
+      -webkit-appearance: none; appearance: none;
+    }
+    .inq-input:focus, .inq-select:focus, .inq-textarea:focus { border-color: #A89274; }
+    .inq-textarea { min-height: 88px; resize: vertical; }
+    .inq-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    @media (max-width: 520px) { .inq-row { grid-template-columns: 1fr; } }
+    .inq-field { margin-bottom: 1rem; }
+    .inq-submit {
+      width: 100%; padding: 1rem;
+      background: #0d1b3e; color: #A89274;
+      border: 1px solid #A89274;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.28em;
+      text-transform: uppercase; cursor: pointer;
+      transition: background 0.3s, color 0.3s; margin-top: 0.5rem;
+    }
+    .inq-submit:hover { background: #A89274; color: #0d1b3e; }
+    .modal-inq-btn {
+      display: block; width: 100%;
+      padding: 1rem 1.5rem;
+      background: #0d1b3e; color: #A89274;
+      border: 1px solid #A89274;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem; letter-spacing: 0.28em;
+      text-transform: uppercase; cursor: pointer;
+      transition: background 0.3s, color 0.3s; margin-top: 2rem;
+      text-align: center;
+    }
+    .modal-inq-btn:hover { background: #A89274; color: #0d1b3e; }
+  
+    /* ── 写真エディトリアルグリッド ─────────────────── */
+    .photo-editorial { overflow: hidden; }
+    .photo-editorial-row { display: grid; grid-template-columns: 1.65fr 1fr; gap: 3px; }
+    .photo-editorial-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 3px; }
+    .photo-cell { position: relative; overflow: hidden; background: #0a1628; }
+    .photo-cell img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: brightness(0.72); transition: transform 0.75s ease, filter 0.5s ease;
+    }
+    .photo-cell:hover img { transform: scale(1.045); filter: brightness(0.45); }
+    .photo-cell-lg { aspect-ratio: 4/3; }
+    .photo-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 3px; }
+    .photo-strip-cell { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0a1628; }
+    .photo-strip-cell img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: brightness(0.72); transition: transform 0.75s ease, filter 0.5s ease;
+    }
+    .photo-strip-cell:hover img { transform: scale(1.045); filter: brightness(0.45); }
+    .photo-overlay {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 1.5rem 1.75rem;
+      background: linear-gradient(to top,
+        rgba(13,27,62,0.92) 0%, rgba(13,27,62,0.18) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .photo-overlay-sm { padding: 0.9rem 1.1rem; }
+    .photo-eyebrow {
+      font-family: 'Montserrat', sans-serif; font-size: 0.58rem;
+      letter-spacing: 0.28em; text-transform: uppercase; color: #A89274;
+      display: block; margin-bottom: 0.3rem;
+    }
+    .photo-title {
+      font-family: 'Noto Serif JP', serif; font-size: 1.14rem;
+      font-weight: 300; color: #fff; margin: 0 0 0.3rem; line-height: 1.3;
+    }
+    .photo-title-sm { font-size: 0.9rem; }
+    .photo-desc {
+      font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem;
+      color: rgba(255,255,255,0.5); font-weight: 300; margin: 0; line-height: 1.65;
+    }
+    @media (max-width: 767px) {
+      .photo-editorial-row { grid-template-columns: 1fr; }
+      .photo-editorial-stack { grid-template-rows: auto; grid-template-columns: 1fr 1fr; }
+      .photo-cell-lg { aspect-ratio: 16/10; }
+      .photo-strip { grid-template-columns: 1fr; }
+    }
+    /* ─────────────────────────────────────────────────── */
+
+    /* ─── Tour card height normalization ────────────── */
+    /* Make each card a flex column so CTA always pins to bottom */
+    .exp-card {
+      display: flex;
+      flex-direction: column;
+    }
+    /* White body area stretches to fill remaining height */
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Clamp description text to ~3 lines with gradient fade */
+    .card-desc {
+      flex: 1;
+      max-height: 5.5em;   /* ≈ 3 lines × 1.8 line-height */
+      overflow: hidden;
+      position: relative;
+    }
+    .card-desc::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2em;
+      background: linear-gradient(to bottom, transparent, #ffffff);
+      pointer-events: none;
+    }
+    /* Hint: card is clickable for full content */
+    .exp-card-clickable .card-body::after {
+      content: 'クリックで詳細を見る';
+      display: block;
+      margin-top: 0.75rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.68rem;
+      color: #A89274;
+      letter-spacing: 0.06em;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .exp-card-clickable:hover .card-body::after {
+      opacity: 1;
+    }
+  
+    /* ─── Marketing Case Studies ─────────────────────── */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(168,146,116,0.1);
+      margin-bottom: 0;
+    }
+    @media (max-width: 1023px) { .case-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 639px)  { .case-grid { grid-template-columns: 1fr; } }
+    .case-card {
+      background: #0d1b3e;
+      overflow: hidden;
+    }
+    .case-img-wrap {
+      position: relative;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #0a1428;
+    }
+    .case-img-wrap img { width:100%;height:100%;object-fit:cover; }
+    .case-img-ph {
+      position:absolute;inset:0;
+      display:none;   /* hidden by default; shown via onerror when image fails */
+      align-items:center;justify-content:center;
+      background:#0a1428;
+      color:rgba(168,146,116,0.3);
+      font-family:'Noto Serif JP',serif;
+      font-size:0.82rem;font-weight:300;
+      text-align:center;padding:0 1rem;
+    }
+    .case-body { padding: 1.25rem 1.5rem 1.5rem; }
+    .case-client {
+      display:block;
+      font-family:'Noto Sans JP',sans-serif;
+      font-size:0.6rem;font-weight:300;
+      letter-spacing:0.15em;color:#A89274;
+      text-transform:uppercase;
+      padding:0.55rem 1.1rem 0.5rem;
+      background:rgba(168,146,116,0.06);
+      border-bottom:1px solid rgba(168,146,116,0.15);
+    }
+    .case-title {
+      font-family:'Noto Serif JP',serif;
+      font-size:0.88rem;font-weight:400;
+      color:rgba(255,255,255,0.82);
+      margin-bottom:0.65rem;line-height:1.55;
+    }
+    .case-desc {
+      font-family:'Noto Sans JP',sans-serif;
+      font-size:0.76rem;font-weight:300;
+      color:rgba(255,255,255,0.6);line-height:1.9;
+    }
+    /* Modal link row */
+    .modal-link-row {
+      display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2.5rem;margin-bottom:1.5rem;
+    }
+    .modal-ext-link {
+      display:inline-flex;align-items:center;gap:0.45rem;
+      padding:0.55rem 1.1rem;
+      border:1px solid #A89274;color:#A89274;
+      font-family:'Noto Sans JP',sans-serif;
+      font-size:0.76rem;font-weight:300;
+      text-decoration:none;border-radius:1px;transition:all 0.2s;
+    }
+    .modal-ext-link:hover { background:#A89274;color:#0d1b3e; }
+
+    /* ── Pick Up Experience Card ── */
+    .pickup-card {
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(168,146,116,0.28);
+      border-left: 2px solid #A89274;
+      background: rgba(168,146,116,0.04);
+      text-decoration: none;
+      transition: border-color 0.35s ease, background 0.35s ease, transform 0.3s ease;
+      cursor: pointer;
+      max-width: 520px;
+    }
+    .pickup-card:hover {
+      border-color: rgba(168,146,116,0.7);
+      background: rgba(168,146,116,0.09);
+      transform: translateX(4px);
+    }
+    .pickup-accent-line { width:0; flex-shrink:0; }
+    .pickup-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 1.1rem 1.3rem 1.1rem 1.4rem;
+      width: 100%;
+    }
+    .pickup-text-block { display:flex;flex-direction:column;gap:0.22rem; }
+    .pickup-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.54rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #A89274;
+      display: block;
+    }
+    .pickup-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #ffffff;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      letter-spacing: 0.06em;
+    }
+    .pickup-title-en {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .pickup-sub {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      display: block;
+      margin-top: 0.15rem;
+    }
+    .pickup-arrow-wrap {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(168,146,116,0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .pickup-card:hover .pickup-arrow-wrap {
+      border-color: #A89274;
+      background: rgba(168,146,116,0.15);
+    }
+    .pickup-arrow { transition: transform 0.3s ease; }
+    .pickup-card:hover .pickup-arrow { transform: translateX(2px); }
+    .pickup-shimmer {
+      position: absolute;
+      top:0; left:-100%; width:60%; height:100%;
+      background: linear-gradient(105deg, transparent, rgba(168,146,116,0.07), transparent);
+      transition: left 0.5s ease;
+      pointer-events: none;
+    }
+    .pickup-card:hover .pickup-shimmer { left:150%; }
+
+    /* ── Logo Image ── */
+    .logo-img-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-link { opacity: 1; transition: opacity 0.3s ease; }
+    .logo-link:hover { opacity: 0.82; }
+    .logo-img {
+      display: block;
+      width: 140px;
+      height: auto;
+      max-height: 46px;
+      object-fit: contain;
+      /* White-background PNG on dark bg: invert makes it white silhouette */
+      filter: brightness(0) invert(1);
+      transition: filter 0.45s ease, opacity 0.3s ease;
+    }
+    /* When header is scrolled, keep same treatment (dark bg) */
+    #header.scrolled .logo-img {
+      filter: brightness(0) invert(1);
+    }
+
+    /* ── Full-Funnel Diagram ── */
+    /* ─── Funnel v2 (Bar-chart style) ──────────────────── */
+    .fv2 { width: 100%; padding: 0.5rem 0; }
+    .fv2-lbl {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: rgba(168,146,116,0.45); text-align: center; margin-bottom: 2rem;
+    }
+    .fv2-rows { display: flex; flex-direction: column; gap: 4px; max-width: 700px; margin: 0 auto; }
+    .fv2-row  { display: flex; align-items: center; gap: 1.4rem; }
+    .fv2-bar  {
+      height: 46px; flex-shrink: 0;
+      border: 1px solid rgba(168,146,116,0.32);
+      display: flex; align-items: center; padding: 0 1.1rem; gap: 0.8rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .fv2-bar:hover { border-color: rgba(168,146,116,0.7); background: rgba(168,146,116,0.06); }
+    .fv2-bar.active { border-color: rgba(168,146,116,0.75); background: rgba(168,146,116,0.1); }
+    .fv2-num  { font-family: 'Montserrat',sans-serif; font-size:0.5rem; letter-spacing:0.18em; color:rgba(168,146,116,0.4); flex-shrink:0; }
+    .fv2-name { font-family: 'Montserrat',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; color:#fff; white-space:nowrap; }
+    .fv2-tags { font-family: 'Noto Sans JP',sans-serif; font-size:0.63rem; font-weight:300; color:rgba(255,255,255,0.42); line-height:1.6; flex:1; min-width:0; }
+    .fv2-foot {
+      display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+      margin-top:1.8rem; padding-top:1.4rem; border-top:1px solid rgba(168,146,116,0.1);
+    }
+    .fv2-badge {
+      font-family:'Montserrat',sans-serif; font-size:0.55rem; letter-spacing:0.28em;
+      text-transform:uppercase; color:#A89274; border:1px solid rgba(168,146,116,0.3);
+      padding:0.25rem 0.9rem;
+    }
+    .fv2-caption { font-family:'Noto Sans JP',sans-serif; font-size:0.75rem; font-weight:300; color:rgba(255,255,255,0.5); text-align:center; }
+    @media (max-width: 768px) {
+      .fv2-row  { flex-direction: column; align-items: stretch; gap: 0.2rem; margin-bottom: 0.5rem; }
+      .fv2-bar  { width: 100% !important; }
+      .fv2-tags { font-size: 0.6rem; }
+    }}
+    }
+  </style>
+</head>
+
+<body class="bg-warm-wh">
+
+  <!-- ===== Google Tag Manager (BODY) ===== -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC95HBQ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- ===== End Google Tag Manager ===== -->
+
+
+  <!-- ════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════ -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+
+      <!-- Logo: PNG image (LX_logo.png) -->
+      <a href="#" class="logo-link flex-shrink-0 group" aria-label="株式会社ロイヤルエクスペリエンス トップへ">
+        <div class="logo-img-wrap">
+          <img src="images/LX_logo.png"
+               alt="LOYAL EXPERIENCE 株式会社ロイヤルエクスペリエンス"
+               class="logo-img"
+               width="155" height="57"
+               loading="eager"
+               decoding="async">
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-5">
+        <a href="#about"      class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">About</a>
+        <a href="#business02" class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Inbound</a>
+        <a href="#business01" class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Marketing</a>
+        <a href="#company"    class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Company</a>
+        <a href="#contact"
+           class="border border-gold text-gold hover:bg-gold hover:text-navy-deep font-sans-en text-[0.7rem] tracking-[0.22em] uppercase px-5 py-2.5 transition-all duration-300">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" class="lg:hidden flex flex-col justify-center gap-[6px] w-8 h-8" aria-label="メニュー">
+        <span id="ham1" class="w-6 h-px bg-white block transition-all duration-300 origin-center"></span>
+        <span id="ham2" class="w-4 h-px bg-white block transition-all duration-300 ml-auto"></span>
+        <span id="ham3" class="w-6 h-px bg-white block transition-all duration-300 origin-center"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="ナビゲーションメニュー">
+    <button id="close-menu" class="absolute top-6 right-7 text-white/50 hover:text-white text-3xl font-light leading-none" aria-label="閉じる">✕</button>
+    <a href="#about"      class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">About</a>
+    <a href="#business02" class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Inbound</a>
+    <a href="#business01" class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Marketing</a>
+    <a href="#company"    class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Company</a>
+    <a href="#contact"    class="border border-gold text-gold px-10 py-3 font-sans-en text-sm tracking-widest uppercase hover:bg-gold hover:text-navy-deep transition-all duration-300">Contact</a>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-section">
+    <!-- Static image fallback (shows if video hasn't loaded yet) -->
+    <div class="hero-bg-img" aria-hidden="true"></div>
+    <!-- YouTube video background: autoplay, muted, loop, no controls -->
+    <div class="hero-video-bg" id="hero-video-bg" aria-hidden="true">
+      <iframe
+        id="hero-yt-player"
+        src="https://www.youtube.com/embed/ttXfo5kKqJk?autoplay=1&mute=1&loop=1&playlist=ttXfo5kKqJk&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&enablejsapi=1&origin=https://loyalx.co.jp"
+        title="Loyal Experience hero video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        loading="eager"
+        tabindex="-1">
+      </iframe>
+    </div>
+    <div class="hero-dots"   aria-hidden="true"></div>
+    <div class="hero-glow"   aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-12 w-full">
+      <div class="max-w-3xl">
+        <p class="section-label reveal mb-6" data-i18n="hero-tag">— Loyal Experience Co., Ltd. / Tokyo, Japan</p>
+
+        <h1 class="font-serif-jp text-white font-light leading-[1.25] mb-8 reveal rev-d1"
+            data-i18n="hero-h1"
+            style="font-size: clamp(2.2rem, 5.5vw, 4.5rem);">
+          「ものづくり」を<br>
+          <span class="text-gold">「かちづくり」</span>へ
+        </h1>
+
+        <div class="gold-line-left mb-8 reveal rev-d2"></div>
+
+        <p class="font-sans-jp font-light text-white/65 leading-[2] mb-12 reveal rev-d2"
+           style="font-size: clamp(0.9rem, 2vw, 1.05rem); max-width: 540px;">
+          私たちは、企業と地方に付加価値を生み出す<br class="sp-br">
+          マーケティングカンパニーです。<span class="hero-copy-sp-hide"><br>
+          日本の強みであるものづくり、技術や文化、資源の価値を見つめ直し、生活者やインバウンド富裕層に、より伝わるかたちへと磨き上げ、選ばれる<span class="text-gold font-medium">"価値"</span>へと育てていきます。</span>
+        </p>
+
+        <!-- PICK UP EXPERIENCE: 四国遍路 -->
+        <div class="mt-14 reveal rev-d3 pickup-fv">
+          <p style="font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(168,146,116,0.55);margin-bottom:0.9rem;">— Pick Up Experience</p>
+          <a href="https://www.shikoku-henro.jp/" target="_blank" rel="noopener noreferrer"
+             class="pickup-card group" aria-label="四国遍路 VIP Tour — shikoku-henro.jp">
+            <!-- Gold accent line -->
+            <div class="pickup-accent-line"></div>
+            <div class="pickup-inner">
+              <div class="pickup-text-block">
+                <span class="pickup-label">Shikoku Henro — VIP Journey</span>
+                <span class="pickup-title">四国遍路<span class="pickup-title-en">1,200-year sacred circuit</span></span>
+                <span class="pickup-sub">富裕層向けプライベート巡礼アレンジ</span>
+              </div>
+              <div class="pickup-arrow-wrap">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="pickup-arrow">
+                  <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#A89274" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <!-- Hover shimmer overlay -->
+            <div class="pickup-shimmer" aria-hidden="true"></div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+      <span class="font-sans-en text-[0.6rem] tracking-[0.3em] text-white/25">SCROLL</span>
+      <div class="scroll-indicator w-px h-10 bg-gradient-to-b from-gold/50 to-transparent"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       TICKER / MARQUEE
+  ════════════════════════════════════════════════ -->
+  <div class="bg-navy-deep py-4 overflow-hidden border-b border-gold/10" aria-hidden="true">
+    <div class="marquee-wrap">
+      <div class="marquee-track select-none">
+        <!-- Set A -->
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Marketing Consulting</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">DX Strategy</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Inbound Tourism</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Shikoku Henro VIP</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Setouchi Gastronomy Cruise</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Local Revitalization</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Sustainable Tourism</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Value Creation</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <!-- Set B (duplicate for seamless loop) -->
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Marketing Consulting</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">DX Strategy</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Inbound Tourism</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Shikoku Henro VIP</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Setouchi Gastronomy Cruise</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Local Revitalization</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Sustainable Tourism</span>
+        <span class="text-gold/20 text-lg">◆</span>
+        <span class="font-sans-en text-[0.65rem] tracking-[0.28em] uppercase text-gold/50">Value Creation</span>
+        <span class="text-gold/20 text-lg">◆</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       ABOUT US
+  ════════════════════════════════════════════════ -->
+  <section id="about" class="py-24 lg:py-40 bg-warm-wh">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-28 items-start">
+
+        <!-- Left -->
+        <div>
+          <span class="section-label reveal mb-4" data-i18n="about-label">About Us</span>
+          <h2 class="font-serif-jp text-navy font-light leading-[1.3] mb-8 reveal rev-d1"
+              data-i18n="about-h2"
+              style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
+            世の中の<br><span class="text-gold">"付加価値"</span>を増やす
+          </h2>
+          <div class="gold-line-left mb-10 reveal rev-d1"></div>
+
+          <div class="space-y-5 font-sans-jp font-light text-neutral-600 leading-[1.95] text-[0.9rem] reveal rev-d2">
+            <p>
+              私たちは、企業と地方に付加価値を生み出すプロデュース集団です。
+            </p>
+            <p>
+              日本の強みであるものづくり。企業や地方が培ってきたその価値を、
+              より伝わるかたちへと磨き上げ、未来の成長をともに切り拓きます。
+            </p>
+            <p>
+              マーケティング、企画、体験設計の力で、ものづくりの可能性を、
+              選ばれる<strong class="text-navy font-medium">"かち"</strong>へと育てていきます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 2 Business Axis -->
+        <div class="flex flex-col gap-5 reveal rev-d2">
+
+          <div class="svc-card bg-navy-deep p-8 lg:p-10">
+            <div class="font-sans-en text-gold/60 text-[0.6rem] tracking-[0.32em] uppercase mb-5">Business 01</div>
+            <h3 class="font-serif-jp text-white text-lg font-medium mb-3">インバウンド富裕層体験事業</h3>
+            <p class="text-[0.84rem] text-white/50 font-light leading-relaxed font-sans-jp">
+              四国遍路・瀬戸内・伝統工芸——日本にしかない体験を設計し、
+              訪日富裕層（SBNR層）と地方資源をつなぐ唯一無二の体験を提供します。
+            </p>
+            <a href="#business02" class="inline-block mt-6 text-gold/70 hover:text-gold font-sans-en text-[0.7rem] tracking-[0.2em] uppercase transition-colors">
+              詳しく見る →
+            </a>
+          </div>
+
+          <div class="svc-card bg-white border border-neutral-100 p-8 lg:p-10">
+            <div class="font-sans-en text-gold/60 text-[0.6rem] tracking-[0.32em] uppercase mb-5">Business 02</div>
+            <h3 class="font-serif-jp text-navy text-lg font-medium mb-3">マーケティング・DX支援</h3>
+            <p class="text-[0.84rem] text-neutral-500 font-light leading-relaxed font-sans-jp">
+              中小企業・地方ブランドのマーケティング戦略を立案し、デジタル実装・運用まで一貫して伴走。
+              AI・データを武器に、選ばれる"かち"を共に育てます。
+            </p>
+            <a href="#business01" class="inline-block mt-6 text-navy/50 hover:text-navy font-sans-en text-[0.7rem] tracking-[0.2em] uppercase transition-colors">
+              詳しく見る →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       BUSINESS 01 — MARKETING / DX
+  ════════════════════════════════════════════════ -->
+  <section id="business02" class="py-24 lg:py-40 bg-cream">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+
+      <!-- Header -->
+      <div class="mb-16 lg:mb-20">
+        <span class="section-label reveal mb-4" data-i18n="inbound-label">Business 01</span>
+        <h2 class="font-serif-jp text-navy font-light leading-[1.25] mb-6 reveal rev-d1"
+            data-i18n="inbound-h2"
+            style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
+          地方創生 × インバウンド<br>
+          <span class="text-gold">体験事業</span>
+        </h2>
+        <div class="gold-line-left mb-6 reveal rev-d1"></div>
+        <p class="font-sans-jp font-light text-neutral-500 text-[0.9rem] leading-[2] max-w-2xl reveal rev-d2">
+          瀬戸内の島々、四国の巡礼路、和牛、日本茶　——　日本にしかない、自然と精神が交差する場所へ。<br>
+          富裕層・SBNR層（Spiritual But Not Religious）を惹きつける、唯一無二の日本体験を設計します。
+        </p>
+      </div>
+
+      
+      <!-- ▼ セクションヒーロー画像 -->
+      <div class="relative w-full overflow-hidden mb-16 reveal" style="height: clamp(260px, 40vw, 520px);">
+        <img src="images/setouchi.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c7a52d33-0277-419c-a03c-dbb150c7b18b" alt="瀬戸内インバウンド富裕層体験" loading="lazy" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}"
+             class="w-full h-full object-cover"
+             style="filter: brightness(0.62) saturate(1.1);">
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(13,27,62,0.72) 0%, rgba(13,27,62,0.1) 55%, transparent 100%);"></div>
+        <div class="absolute inset-0 flex flex-col justify-center px-8 lg:px-16 max-w-2xl">
+          <p class="font-sans-en text-gold/70 text-[0.6rem] tracking-[0.4em] uppercase mb-3">Inbound × Local Revitalization</p>
+          <p class="font-serif-jp text-white font-light leading-snug" style="font-size: clamp(1.4rem, 3vw, 2.4rem);">
+            日本にしかない体験を、<br>世界の富裕層へ。
+          </p>
+          <p class="font-sans-jp text-white/55 text-[0.82rem] mt-4 leading-relaxed max-w-md">
+            四国遍路・瀬戸内の島々・和牛・日本茶　——　SBNR層が求める、精神と自然が交差する体験を設計します。
+          </p>
+        </div>
+      </div>
+      <!-- ▲ セクションヒーロー画像 -->
+      <!-- 3-Column Card Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mb-8">
+
+        <!-- Card 1: 四国遍路 -->
+        <article class="exp-card exp-card-clickable reveal" onclick="openTourModal('henro')" role="button" tabindex="0" aria-label="四国遍路VIPツアー詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('henro')">
+          <div class="card-img-wrap">
+            <img src="images/henro.jpg"
+                 data-gcs="https://storage.googleapis.com/production-os-assets/assets/0c458dc4-ff5f-4fee-aa7f-0f19bc60d7e0"
+                 alt="四国遍路VIPツアー"
+                 onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                 class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 44h44M10 44V28M46 44V28M4 28h48M28 8L4 28h48L28 8z" stroke="#A89274" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="20" y="34" width="16" height="10" stroke="#A89274" stroke-width="1.4"/>
+                <line x1="28" y1="34" x2="28" y2="44" stroke="#A89274" stroke-width="1.4"/>
+                <path d="M22 20h12M28 12v8" stroke="#A89274" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Shikoku Henro</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">四国遍路 VIPツアー</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">
+              1,200年の歴史を持つ四国八十八ヶ所霊場を、SBNR層の感性に響く特別プログラムで案内。
+              歩き遍路×高級宿坊体験を組み合わせた唯一無二のスピリチュアルジャーニー。
+            </p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">高知・徳島・香川・愛媛</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+
+        <!-- Card 2: 瀬戸内クルーズ -->
+        <article class="exp-card exp-card-clickable reveal rev-d1" onclick="openTourModal('setouchi')" role="button" tabindex="0" aria-label="瀬戸内ガストロノミークルーズ詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('setouchi')">
+          <div class="card-img-wrap">
+            <img src="images/setouchi.jpg"
+                 data-gcs="https://storage.googleapis.com/production-os-assets/assets/c7a52d33-0277-419c-a03c-dbb150c7b18b"
+                 alt="瀬戸内ガストロノミークルーズ"
+                 onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                 class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 38 Q18 28 28 30 Q38 32 48 38" stroke="#A89274" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+                <path d="M18 38L28 18L38 38" stroke="#A89274" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+                <line x1="6" y1="43" x2="50" y2="43" stroke="#A89274" stroke-width="1" stroke-linecap="round"/>
+                <path d="M28 18V10M24 13l4-3 4 3" stroke="#A89274" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Setouchi Gastronomy</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">瀬戸内ガストロノミークルーズ</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">
+              直島・尾道・犬島を舞台に、現代アートと瀬戸内の食文化を船上で体験。
+              富裕層インバウンド向けのプレミアム体験型クルーズ。
+            </p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">直島・尾道・犬島エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+
+        <!-- Card 3: Naoshima & Teshima Art Trip -->
+        <article class="exp-card exp-card-clickable reveal rev-d2" onclick="openTourModal('naoshima')" role="button" tabindex="0" aria-label="直島・豊島アートトリップ詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('naoshima')">
+          <div class="card-img-wrap">
+            <img src="images/naoshima.jpg"
+                 data-gcs="https://storage.googleapis.com/production-os-assets/assets/0d83667a-0572-46cb-b89e-9ff364b275bf"
+                 alt="直島・豊島アートトリップ"
+                 onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                 class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="28" cy="22" r="10" stroke="#A89274" stroke-width="1.5" fill="none"/>
+                <path d="M14 44 Q28 32 42 44" stroke="#A89274" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <circle cx="28" cy="22" r="3" fill="#A89274" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Naoshima &amp; Teshima Art Journey</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">直島・豊島 アートトリップ</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">
+              世界に類のない「島とアートの共生」。地中美術館・豊島美術館など現代アートの聖地を、プライベートで巡る瀬戸内プレミアムジャーニー。
+            </p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">直島・豊島・小豆島 / 瀬戸内海</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- ムスリム向けCulinary Tour「和食旅」 -->
+        <article class="exp-card exp-card-clickable reveal rev-d1" onclick="openTourModal('washoku')" role="button" tabindex="0" aria-label="ムスリム向けCulinary Tour「和食旅」詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('washoku')">
+          <div class="card-img-wrap">
+            <img src="images/washoku.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c09fe2b9-5b61-4e1c-8f9a-020319950dff" alt="ムスリム向けCulinary Tour「和食旅」" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Washoku-Tabi / Muslim Culinary Tour</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Washoku-Tabi / Muslim Culinary Tour</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">ムスリム向けCulinary Tour「和食旅」</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">日本の食文化を体験型旅行で学ぶ12日間の本格Culinaryツアー。ハラル対応・通訳同行。市場・生産現場・加工工場を巡り、食材から調理器具・作法まで五感で体験。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">全国（複数地域）</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【山口】伝統工芸とマインドフルネスの旅 -->
+        <article class="exp-card exp-card-clickable reveal rev-d2" onclick="openTourModal('hagi')" role="button" tabindex="0" aria-label="【山口】伝統工芸とマインドフルネスの旅詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('hagi')">
+          <div class="card-img-wrap">
+            <img src="images/hagi.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="【山口】伝統工芸とマインドフルネスの旅" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Hagi-Nagato / Crafts & Mindfulness</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Hagi-Nagato / Crafts & Mindfulness</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【山口】伝統工芸とマインドフルネスの旅</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">萩焼の工房へプライベート招待、名工の解説付きで作品鑑賞・購入体験。神仏習合の秘湯「恩湯」早朝貸切、元乃隅神社参拝など精神性豊かな2泊3日。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">山口県・萩長門エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【富山】三郎丸ウイスキーVIPツアー -->
+        <article class="exp-card exp-card-clickable reveal" onclick="openTourModal('whisky')" role="button" tabindex="0" aria-label="【富山】三郎丸ウイスキーVIPツアー詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('whisky')">
+          <div class="card-img-wrap">
+            <img src="images/whisky.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="【富山】三郎丸ウイスキーVIPツアー" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">"Sanroku Club" Whisky VIP Tour</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">"Sanroku Club" Whisky VIP Tour</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【富山】三郎丸ウイスキーVIPツアー</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">幻の三郎丸原酒を試飲し「百年倶楽部」限定カスクから1本をボトリング。T&T TOYAMAへ特別招待後、デスティネーションレストラン「LEVO」でガストロノミーディナー。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">富山県・砺波エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【京都】仁和寺 非公開エリア宿泊プラン -->
+        <article class="exp-card exp-card-clickable reveal rev-d1" onclick="openTourModal('ninnaji')" role="button" tabindex="0" aria-label="【京都】仁和寺 非公開エリア宿泊プラン詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('ninnaji')">
+          <div class="card-img-wrap">
+            <img src="images/ninnaji.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="【京都】仁和寺 非公開エリア宿泊プラン" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Ninnaji / Kyoto Imperial Temple</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Ninnaji / Kyoto Imperial Temple</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【京都】仁和寺 非公開エリア宿泊プラン</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">皇室ゆかりの世界遺産・仁和寺へプライベート招待。通常非公開の御堂・寺宝を僧侶と拝観。閉門後の御殿でお食事・雅楽鑑賞・御室流生け花体験も可能。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">京都府・御室エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【京都】智積院 静寂と伝統の宿泊体験 -->
+        <article class="exp-card exp-card-clickable reveal rev-d2" onclick="openTourModal('chishakuin')" role="button" tabindex="0" aria-label="【京都】智積院 静寂と伝統の宿泊体験詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('chishakuin')">
+          <div class="card-img-wrap">
+            <img src="images/chishakuin.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="【京都】智積院 静寂と伝統の宿泊体験" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Chishakuin / Zen Retreat Kyoto</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Chishakuin / Zen Retreat Kyoto</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【京都】智積院 静寂と伝統の宿泊体験</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">国宝庭園・長谷川等伯の襖絵を独占鑑賞。阿字観（瞑想）・写経・坐禅・朝の勤行体験を通じ心身を深く整える1泊2日。智積院会館に宿泊。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">京都府・東山エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【京都】西本願寺 非公開エリアへご招待 -->
+        <article class="exp-card exp-card-clickable reveal" onclick="openTourModal('nishihonganji')" role="button" tabindex="0" aria-label="【京都】西本願寺 非公開エリアへご招待詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('nishihonganji')">
+          <div class="card-img-wrap">
+            <img src="images/nishihonganji.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="【京都】西本願寺 非公開エリアへご招待" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Nishi Honganji / UNESCO Heritage</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Nishi Honganji / UNESCO Heritage</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【京都】西本願寺 非公開エリアへご招待</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">世界遺産・西本願寺の非公開エリア「鴻の間」と名勝「虎渓の庭」に特別招待。プライベート参拝後、茶席でのおもてなし。着物着付け体験・記念撮影も可能。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">京都府・堀川エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【滋賀】永治屋清左衛門 着物プライベートオーダー -->
+        <article class="exp-card exp-card-clickable reveal rev-d1" onclick="openTourModal('nishiya')" role="button" tabindex="0" aria-label="【滋賀】永治屋清左衛門 着物プライベートオーダー詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('nishiya')">
+          <div class="card-img-wrap">
+            <img src="images/nishiya.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="【滋賀】永治屋清左衛門 着物プライベートオーダー" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Nishiya Seizaemon / 230-Year Kimono</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Nishiya Seizaemon / 230-Year Kimono</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【滋賀】永治屋清左衛門 着物プライベートオーダー</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">創業230年の老舗工房で世界に一点だけの着物・帯をプライベートオーダー。古代染織品や工芸文化財を鑑賞しながら、染織文化財復元の技を五感で体感。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">滋賀県・米原エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+        <!-- 【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー -->
+        <article class="exp-card exp-card-clickable reveal rev-d2" onclick="openTourModal('sakai')" role="button" tabindex="0" aria-label="【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー詳細を見る" onkeydown="if(event.key==='Enter')openTourModal('sakai')">
+          <div class="card-img-wrap">
+            <img src="images/sakai.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c09fe2b9-5b61-4e1c-8f9a-020319950dff" alt="【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';this.nextElementSibling.style.display='flex';}" class="w-full h-full object-cover">
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#0d1b3e 60%,#1e3a6e);align-items:center;justify-content:center;">
+              <span style="font-family:'Noto Serif JP',serif;color:#A89274;font-size:0.75rem;opacity:0.7;">Sakai Knife / Forging Experience</span>
+            </div>
+          </div>
+          <div class="bg-white p-7 border border-neutral-100 border-b-0 card-body">
+            <span class="section-label mb-2">Sakai Knife / Forging Experience</span>
+            <h3 class="font-serif-jp text-navy text-[1.05rem] font-medium mb-3">【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.82rem] leading-relaxed card-desc">世界のシェフが愛用する堺打刃物の鍛錬・研ぎを体験し、鋼の種類・形状を選んで世界に1本のオリジナル包丁をプライベートオーダー。</p>
+            <p class="font-sans-jp text-neutral-400 text-[0.72rem] mt-4">大阪府・堺エリア</p>
+          </div>
+          <div class="card-cta-strip">
+            <span class="text-gold/80">詳細・お問い合わせ</span>
+            <span class="text-gold">→</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       BUSINESS 02 — INBOUND × LOCAL REVITALIZATION
+  ════════════════════════════════════════════════ -->
+  <section id="business01" class="py-24 lg:py-40 bg-navy-deep">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 lg:mb-20 gap-6">
+        <div>
+          <span class="section-label reveal mb-4" data-i18n="mkt-label">Business 02</span>
+          <h2 class="font-serif-jp text-white font-light leading-[1.25] reveal rev-d1"
+              data-i18n="mkt-h2"
+              style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
+            マーケティング支援<br>
+            <span class="text-gold">× DX 支援事業</span>
+          </h2>
+        </div>
+        <p class="font-sans-jp font-light text-white/60 text-sm max-w-xs leading-relaxed reveal rev-d2 lg:text-right">
+          AIとデジタルの力で、<br>
+          企業のマーケティングとDXを加速する。<br>
+          戦略立案から実装・運用まで一貫支援。
+        </p>
+      </div>
+
+      <div class="gold-line mb-16 reveal"></div>
+
+      <!-- Full-Funnel Marketing Diagram -->
+      <div class="fv2 reveal">
+
+        <p class="fv2-lbl">Full-Funnel Marketing</p>
+
+        <div class="fv2-rows">
+
+          <div class="fv2-row">
+            <div class="fv2-bar" style="width:100%">
+              <span class="fv2-num">01</span>
+              <span class="fv2-name">Awareness</span>
+            </div>
+            <div class="fv2-tags">Brand Strategy&nbsp;·&nbsp;PR&nbsp;·&nbsp;Content&nbsp;·&nbsp;SEO</div>
+          </div>
+
+          <div class="fv2-row">
+            <div class="fv2-bar" style="width:84%">
+              <span class="fv2-num">02</span>
+              <span class="fv2-name">Interest</span>
+            </div>
+            <div class="fv2-tags">SNS&nbsp;·&nbsp;Paid Ads&nbsp;·&nbsp;Email&nbsp;·&nbsp;Influencer</div>
+          </div>
+
+          <div class="fv2-row">
+            <div class="fv2-bar" style="width:68%">
+              <span class="fv2-num">03</span>
+              <span class="fv2-name">Consideration</span>
+            </div>
+            <div class="fv2-tags">UX&nbsp;·&nbsp;LP Optimization&nbsp;·&nbsp;Retargeting</div>
+          </div>
+
+          <div class="fv2-row">
+            <div class="fv2-bar active" style="width:53%">
+              <span class="fv2-num">04</span>
+              <span class="fv2-name">Conversion</span>
+            </div>
+            <div class="fv2-tags">CRO&nbsp;·&nbsp;Sales&nbsp;·&nbsp;DX&nbsp;·&nbsp;CRM</div>
+          </div>
+
+          <div class="fv2-row">
+            <div class="fv2-bar" style="width:40%">
+              <span class="fv2-num">05</span>
+              <span class="fv2-name">Retention</span>
+            </div>
+            <div class="fv2-tags">LTV&nbsp;·&nbsp;Loyalty&nbsp;·&nbsp;AI</div>
+          </div>
+
+          <div class="fv2-row">
+            <div class="fv2-bar" style="width:28%">
+              <span class="fv2-num">06</span>
+              <span class="fv2-name">Advocacy</span>
+            </div>
+            <div class="fv2-tags">NPS&nbsp;·&nbsp;Referral&nbsp;·&nbsp;PR</div>
+          </div>
+
+        </div><!-- /.fv2-rows -->
+
+        <div class="fv2-foot">
+          <span class="fv2-badge">End-to-End Accompaniment</span>
+          <p class="fv2-caption">Strategy · Digital · DX · CRM · PM — all in one team.</p>
+        </div>
+
+      </div><!-- /.fv2 -->
+
+      <!-- Case Studies -->
+      <div class="mt-20 mb-0">
+        <p class="section-label reveal mb-2">Case Studies</p>
+        <p class="font-sans-jp font-light text-white/35 text-[0.8rem] mb-10 reveal rev-d1">
+          主要なマーケティング・DX支援事例
+        </p>
+        <div class="case-grid reveal rev-d1">
+
+          <!-- Case 01: 日経 TVer -->
+          <div class="case-card">
+            <span class="case-client">日本経済新聞社</span>
+            <div class="case-img-wrap">
+              <img src="images/TVER.png" alt="最強の時間割 TVer"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">日本経済新聞社<br>TVer オリジナル番組</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">TVer初のオリジナル番組「最強の時間割」立ち上げ</p>
+              <p class="case-desc">TVerプロデューサーと連携し、初の完全オリジナルシリーズを企画・立ち上げ。データ分析で広告効果を可視化し、2023年から2シーズン展開。</p>
+            </div>
+          </div>
+
+          <!-- Case 02: 日経 for Education -->
+          <div class="case-card">
+            <span class="case-client">日本経済新聞社</span>
+            <div class="case-img-wrap">
+              <img src="images/nikkei-education.png" alt="日経電子版 for Education"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">日本経済新聞社<br>日経電子版 for Education</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">日経電子版 for Education 立ち上げ</p>
+              <p class="case-desc">教育機関向けサービスの立ち上げを支援。法人・教育分野への導入拡大をマーケティングで牽引し、有料会員100万人突破に貢献。</p>
+            </div>
+          </div>
+
+          <!-- Case 03: ベネッセ -->
+          <div class="case-card">
+            <span class="case-client">株式会社ベネッセコーポレーション</span>
+            <div class="case-img-wrap">
+              <img src="images/benesse.png" alt="ベネッセ こどもちゃれんじ 進研ゼミ"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">株式会社ベネッセ<br>こどもちゃれんじ／進研ゼミ</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">こどもちゃれんじ／進研ゼミ デジタル責任者</p>
+              <p class="case-desc">こどもちゃれんじ・進研ゼミのデジタルシフトを統括。マーケティング責任者としてブランド戦略・デジタル施策を推進。</p>
+            </div>
+          </div>
+
+          <!-- Case 04: サンリオエンターテイメント -->
+          <div class="case-card">
+            <span class="case-client">株式会社サンリオエンターテイメント</span>
+            <div class="case-img-wrap">
+              <img src="images/puroland.png" alt="サンリオエンターテイメント サンリオピューロランド"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">サンリオエンターテイメント<br>マーケティング・DX支援</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">コーポレートサイト刷新・インバウンド富裕層VIPプラン開発</p>
+              <p class="case-desc">コーポレートサイトのリニューアルとDX推進を支援。インバウンド富裕層向けVIPプランの企画・開発・運営も手がける。</p>
+            </div>
+          </div>
+
+          <!-- Case 05: 三井住友カード -->
+          <div class="case-card">
+            <span class="case-client">株式会社三井住友カード</span>
+            <div class="case-img-wrap">
+              <img src="images/mitsuisumitomocard.jpg" alt="三井住友カード 最上位会員 イベント"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">株式会社三井住友カード<br>最上位会員向けイベント</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">最上位会員向けイベント企画造成</p>
+              <p class="case-desc">プラチナ会員等の最上位顧客向けに、国産ワインと日本料理を組み合わせた特別体験イベントを企画・造成。</p>
+            </div>
+          </div>
+
+          <!-- Case 06: 東京都中小企業振興公社 -->
+          <div class="case-card">
+            <span class="case-client">公益財団法人 東京都中小企業振興公社</span>
+            <div class="case-img-wrap">
+              <img src="images/tokyochusyokigyo.png" alt="東京都中小企業振興公社 デジタルマーケアドバイザー"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="case-img-ph">東京都中小企業振興公社<br>デジタルマーケアドバイザー</div>
+            </div>
+            <div class="case-body">
+              <p class="case-title">デジタルマーケティングアドバイザー</p>
+              <p class="case-desc">令和7年度デジタルマーケティング導入スクール講師。都内中小企業へ生成AI活用・WEB改善・SNS戦略などを提供。</p>
+            </div>
+          </div>
+
+        </div><!-- /.case-grid -->
+      </div><!-- /Case Studies -->
+
+      <!-- Client / Credentials Section -->
+      <div class="mt-24 pt-14 border-t border-white/8 reveal">
+        <p class="section-label mb-2">Marketing Support — Clients &amp; Credentials</p>
+        <p class="font-sans-jp font-light text-white/35 text-[0.8rem] mb-10">
+          マーケティング支援・DX支援の主な実績先
+        </p>
+
+        <!-- Client name grid: each pill is individually readable with clear spacing -->
+        <div class="client-grid">
+
+          <div class="client-pill">
+            <span class="client-name">株式会社サンリオ</span>
+            <span class="client-sub">Sanrio Co., Ltd.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">株式会社サンリオエンターテイメント</span>
+            <span class="client-sub">Sanrio Entertainment Co., Ltd.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">株式会社三井住友カード</span>
+            <span class="client-sub">Sumitomo Mitsui Card Co., Ltd.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">株式会社電通</span>
+            <span class="client-sub">Dentsu Inc.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">株式会社電通デジタル</span>
+            <span class="client-sub">Dentsu Digital Inc.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">株式会社電通ダイレクト</span>
+            <span class="client-sub">Dentsu Direct Inc.</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">公益財団法人東京都中小企業振興公社</span>
+            <span class="client-sub">Digital Marketing Advisor</span>
+          </div>
+
+          <div class="client-pill">
+            <span class="client-name">丸紅アークログ株式会社</span>
+            <span class="client-sub">Marubeni Arc Log Co., Ltd.</span>
+          </div>
+
+                    <div class="client-pill">
+            <span class="client-name">日本ブラインドサッカー協会</span>
+            <span class="client-sub">Japan Blind Soccer Association</span>
+          </div>
+
+        </div>
+
+        <p class="font-sans-jp font-light text-white/20 text-[0.72rem] mt-8 leading-relaxed">
+          ※ 守秘義務のある案件はクライアント名非掲載。具体的な支援内容はお問い合わせください。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       COMPANY / PROFILE
+  ════════════════════════════════════════════════ -->
+  <section id="company" class="py-24 lg:py-40 bg-white">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+
+      <div class="mb-16 lg:mb-20">
+        <span class="section-label reveal mb-4" data-i18n="company-label">Company / Profile</span>
+        <h2 class="font-serif-jp text-navy font-light leading-[1.25] reveal rev-d1"
+            data-i18n="company-h2"
+            style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
+          会社概要 ・ 代表プロフィール
+        </h2>
+        <div class="gold-line-left mt-6 reveal rev-d1"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-28">
+
+        <!-- Company Overview Table -->
+        <div class="reveal">
+          <h3 class="font-serif-en text-gold text-lg tracking-[0.2em] uppercase mb-8">Company Overview</h3>
+          <table class="co-table w-full">
+            <tbody>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">会社名</td>
+                <td class="font-sans-jp text-navy font-medium">
+                  株式会社ロイヤルエクスペリエンス<br>
+                  <span class="font-sans-en font-normal text-neutral-400 text-[0.75rem] tracking-wide">Loyal Experience Co., Ltd.</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">代表取締役</td>
+                <td class="font-sans-jp text-navy">清水 耕太郎</td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">事業内容</td>
+                <td class="font-sans-jp text-navy leading-[1.8]">
+                  マーケティング支援・DX支援事業<br>
+                  インバウンド富裕層体験・地方創生事業<br>
+                  広告代理業
+                </td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">主な支援先</td>
+                <td class="font-sans-jp text-navy leading-[1.8] text-sm">
+                  大手メディア・教育・観光・製造・小売 等<br>
+                  東京都中小企業（振興公社経由）
+                </td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">ウェブサイト</td>
+                <td>
+                  <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
+                     class="font-sans-en text-gold hover:underline text-sm">
+                    https://loyalx.co.jp
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">所在地</td>
+                <td class="font-sans-jp text-navy text-sm">〒150-0041 東京都渋谷区神南1-23-14</td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">電話</td>
+                <td class="font-sans-jp text-navy text-sm">+81-3-6892-7276</td>
+              </tr>
+              <tr>
+                <td class="font-sans-jp text-neutral-400">関連会社</td>
+                <td class="font-sans-jp text-navy text-sm">株式会社テンプルステイ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Representative Profile -->
+        <div class="reveal rev-d1">
+          <h3 class="font-serif-en text-gold text-lg tracking-[0.2em] uppercase mb-8">Representative</h3>
+
+          <div class="flex gap-7 mb-8">
+            <!-- Photo placeholder -->
+            <img src="images/shimizu.jpg" alt="清水耕太郎 代表取締役" loading="lazy"
+                 style="width:120px;height:160px;object-fit:cover;object-position:top center;flex-shrink:0;border-radius:2px;">
+            <div class="flex flex-col justify-center">
+              <p class="font-sans-en text-[0.65rem] text-neutral-400 tracking-[0.25em] uppercase mb-1">代表取締役</p>
+              <h4 class="font-serif-jp text-navy text-2xl font-medium mb-1">清水 耕太郎</h4>
+              <p class="font-serif-en text-gold text-sm tracking-[0.15em] mb-3">Kotaro Shimizu</p>
+              <p class="font-sans-jp text-neutral-500 text-xs leading-relaxed">
+                マーケター / ストラテジックプランナー<br>
+                コンサルタント / 起業家
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-4 font-sans-jp font-light text-neutral-600 text-[0.875rem] leading-[1.95]">
+            <p>
+              日経電子版・日経電子版for Education、こどもちゃれんじ・進研ゼミ（ベネッセコーポレーション）など大手メディア・教育事業でのマーケティング実務を経て独立。マーケティング・DX・地域創生を専門とするプロフェッショナルとして活躍。
+            </p>
+            <p>
+              現在は株式会社ロイヤルエクスペリエンスの代表として、BtoB企業のマーケティング支援・DXコンサルティングと、インバウンド×地方創生事業を並走させる。
+            </p>
+            <p>
+              東京都中小企業振興公社デジタルマーケティングアドバイザーとして都内中小企業を多数支援。2026年には四国の寺院宿坊再生を行う株式会社テンプルステイを設立。
+            </p>
+          </div>
+
+          <!-- Skill Tags -->
+          <div class="mt-7 flex flex-wrap gap-2">
+            <span class="tag-pill">Marketing Strategy</span>
+            <span class="tag-pill">DX Consulting</span>
+            <span class="tag-pill">Project Mgmt</span>
+            <span class="tag-pill">Inbound Tourism</span>
+            <span class="tag-pill">Local Revitalization</span>
+            <span class="tag-pill">Fund Raising</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════════ -->
+  <section id="contact" class="py-24 lg:py-40 bg-navy-deep">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="max-w-2xl mx-auto text-center">
+
+        <span class="section-label reveal mb-6" data-i18n="contact-label">Contact</span>
+        <h2 class="font-serif-jp text-white font-light leading-[1.35] mb-6 reveal rev-d1"
+            style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
+          <span data-i18n="contact-h2">今ある「ものづくり」を活かして<span class="text-gold">新しい「価値」を創る。</span></span>
+        </h2>
+
+        <div class="gold-line max-w-xs mx-auto mb-8 reveal rev-d1"></div>
+
+        <p class="font-sans-jp font-light text-white/50 text-[0.9rem] leading-[2] mb-12 reveal rev-d2">
+          マーケティング支援・AI活用支援、インバウンド富裕層・地方創生プロジェクトへのご相談、<br class="hidden md:inline">
+          お気軽にお問い合わせください。
+        </p>
+
+        <div class="reveal rev-d3 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:info@loyalx.co.jp"
+             class="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold hover:text-navy-deep px-10 py-4 font-sans-en text-[0.72rem] tracking-[0.25em] uppercase transition-all duration-300 group">
+            お問い合わせ
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3">info@loyalx.co.jp</p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="bg-[#f4f0ea] border-t border-gold/20 pt-16 pb-10">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+
+      <div class="grid md:grid-cols-3 gap-10 mb-14">
+
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="#" class="flex flex-col leading-none mb-6 group">
+            <span class="font-serif-en text-[1.1rem] tracking-[0.22em] text-navy font-light group-hover:text-gold transition-colors">
+              LOYAL EXPERIENCE
+            </span>
+            <span class="font-sans-jp text-[0.62rem] text-gold tracking-[0.18em] mt-1 font-light">
+              株式会社ロイヤルエクスペリエンス
+            </span>
+          </a>
+          <p class="font-sans-jp font-light text-navy/50 text-xs leading-relaxed" data-i18n="footer-tagline">
+            かちづくりカンパニー。<br>
+            マーケティングと体験で<br>
+            日本の価値を世界へ。
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Navigation</p>
+          <ul class="space-y-3">
+            <li><a href="#about"      class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">About Us</a></li>
+            <li><a href="#business02" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-inbound">インバウンド富裕層体験事業</a></li>
+            <li><a href="#business01" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-mkt">マーケティング・DX支援</a></li>
+            <li><a href="#company"    class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-co">会社概要・プロフィール</a></li>
+            <li><a href="#contact"    class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div>
+          <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Contact</p>
+          <a href="mailto:info@loyalx.co.jp"
+             class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
+            info@loyalx.co.jp
+          </a>
+          <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
+             class="font-sans-en text-navy/50 hover:text-gold text-sm transition-colors block">
+            https://loyalx.co.jp
+          </a>
+          <div class="mt-8">
+            <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-3">Group Company</p>
+            <p class="font-sans-jp font-light text-navy/50 text-xs leading-relaxed">
+              株式会社テンプルステイ
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gold-line"></div>
+
+      <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+        <p class="font-sans-en text-navy/40 text-xs">
+          © 2025 Loyal Experience Co., Ltd. All rights reserved.
+        </p>
+        <p class="font-sans-jp text-navy/40 text-xs">株式会社ロイヤルエクスペリエンス</p>
+      </div>
+      <div class="mt-4 pt-4 border-t border-navy/10">
+        <p class="font-sans-jp text-navy/40 text-[0.68rem] leading-relaxed tracking-wide text-center">
+          東京都知事登録旅行サービス手配業 第20591号
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 四国遍路 VIPツアー
+  ════════════════════════════════════════════════ -->
+  <div id="modal-henro" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="四国遍路VIPツアー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/henro.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/0c458dc4-ff5f-4fee-aa7f-0f19bc60d7e0" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Shikoku Henro</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">四国遍路 VIPツアー</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('henro')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+
+        <!-- 旅行概要 -->
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">
+          1,200年の歴史を持つ四国八十八ヶ所霊場を、富裕層・SBNR層（Spiritual But Not Religious）向けに設計した少人数制スピリチュアルジャーニー。本物の修行（滝行・護摩行・穴禅定）と高級宿坊宿泊を組み合わせた、世界に一つだけの巡礼体験。英語・スペイン語対応可能な専属ガイドが同行し、遍路の精神と歴史を深く案内します。
+        </p>
+        <div class="modal-divider"></div>
+
+        <!-- 3つのポイント -->
+        <span class="modal-section-title">3つのポイント</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">本物の修行体験</p>
+              <p class="modal-point-desc">一般非公開の滝行・護摩行・穴禅定（洞窟瞑想）を少人数で体験。僧侶と共に、遍路の精神の核心に触れます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">プレミアム宿坊 × 特別食</p>
+              <p class="modal-point-desc">ヴィーガン・グルテンフリー・バリアフリー対応の高級宿坊に宿泊。精進料理のアレンジからガストロノミー体験まで対応可能。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">専属英語ガイド × 少人数制</p>
+              <p class="modal-point-desc">最大8名の少人数制で、遍路の歴史・哲学・体験を英語で深く解説。旅程・内容はゲストに合わせてカスタマイズ可能。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 旅行プラン -->
+        <span class="modal-section-title">旅行プラン（例：7日間）</span>
+        <div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 1</span>
+            <p class="itinerary-day-content">高松・徳島着 → 安楽寺（第19番）宿坊チェックイン → ウェルカム精進料理・オリエンテーション</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 2</span>
+            <p class="itinerary-day-content">早朝勤行参加 → 歩き遍路体験（徳島エリア） → 建治寺（第22番）→ 滝行体験</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 3</span>
+            <p class="itinerary-day-content">慈眼寺（第58番）→ 穴禅定（洞窟瞑想）体験 → 四国山中の古道歩き → 高知方面移動</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 4</span>
+            <p class="itinerary-day-content">直島へ移動 → 地中美術館・家プロジェクト鑑賞 → プライベート護摩行体験</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 5</span>
+            <p class="itinerary-day-content">四万十川 → 漁師船チャーター・水上禅 → 四万十の食材を使ったガストロノミーディナー</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 6</span>
+            <p class="itinerary-day-content">WEEK神山（神山町）→ アート×里山体験 → 地域ゆかりのシェフによる特別夕食</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 7</span>
+            <p class="itinerary-day-content">最終日フリータイム → 高松・徳島または空港へ送迎 → 出発</p>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 含まれるもの / 含まれないもの -->
+        <div class="incl-grid">
+          <div>
+            <span class="modal-section-title">含まれるもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>宿坊・ホテル宿泊費（全泊）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>英語専属ガイド同行費</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>修行体験費一式（滝行・護摩行・穴禅定）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>食事（朝食・夕食）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>現地送迎・移動手配</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>各寺院入場・奉納料</div>
+            </div>
+          </div>
+          <div>
+            <span class="modal-section-title">含まれないもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>国内外航空券・新幹線</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>昼食費</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>個人的費用・お土産</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>旅行保険</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>特別オプション体験</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- その他情報 -->
+        <span class="modal-section-title">その他情報</span>
+        <p class="modal-other-text">
+          最少催行人数：2名 / 最大：8名（少人数制）<br>
+          英語・スペイン語対応可。旅程・内容は最短4泊5日からカスタマイズ対応。<br>
+          車椅子・バリアフリー対応、ヴィーガン・グルテンフリー食対応可。<br>
+          最適シーズン：通年（春・秋が特に好適）
+        </p>
+
+
+        <!-- 特設ページ・動画リンク -->
+        <div class="modal-link-row">
+          <a href="https://www.shikoku-henro.jp/" target="_blank" rel="noopener noreferrer" class="modal-ext-link">
+            &#127981; 四国遍路 特設サイト &rarr; shikoku-henro.jp
+          </a>
+          <a href="https://youtu.be/ttXfo5kKqJk" target="_blank" rel="noopener noreferrer" class="modal-ext-link" id="henro-movie-link">
+            &#9654; イメージムービーを見る <!-- 動画URLをここに設定 -->
+          </a>
+        </div>
+
+        <!-- Inquiry CTA -->
+        <button class="modal-inq-btn" onclick="openInquiry('四国遍路VIPツアー')">
+          このツアーについてお問い合わせ →
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 瀬戸内ガストロノミークルーズ
+  ════════════════════════════════════════════════ -->
+  <div id="modal-setouchi" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="瀬戸内ガストロノミークルーズ詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/setouchi.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c7a52d33-0277-419c-a03c-dbb150c7b18b" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Setouchi Gastronomy</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">瀬戸内ガストロノミークルーズ</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('setouchi')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+
+        <!-- 旅行概要 -->
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">
+          プライベートクルーザーで直島・豊島・犬島・尾道を巡り、現代アートと瀬戸内の食文化を贅沢に体感。地元の漁師やシェフとのコラボレーションによるガストロノミー体験が旅の核心。富裕層インバウンド向けに設計された、アート×食×海のプレミアム体験クルーズ。
+        </p>
+        <div class="modal-divider"></div>
+
+        <!-- 3つのポイント -->
+        <span class="modal-section-title">3つのポイント</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">プライベートクルーザー × 多島美</p>
+              <p class="modal-point-desc">チャータークルーザーで瀬戸内の島々をプライベートに巡る。直島・豊島・犬島・尾道を移動の贅沢ごと体験。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">現代アートの聖地めぐり</p>
+              <p class="modal-point-desc">地中美術館・豊島美術館・犬島精錬所美術館を専属ガイドと鑑賞。アーティスト視点の解説でアートの奥深さを体感。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">漁師体験 × 船上ガストロノミー</p>
+              <p class="modal-point-desc">瀬戸内海の漁師船に同乗し、獲れたての魚介をシェフが即興調理。海上でしか味わえないライブガストロノミー体験。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 旅行プラン -->
+        <span class="modal-section-title">旅行プラン（例：5日間）</span>
+        <div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 1</span>
+            <p class="itinerary-day-content">宇野港・岡山集合 → プライベートクルーザー乗船 → 直島着 → ベネッセハウス宿泊・ウェルカムディナー</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 2</span>
+            <p class="itinerary-day-content">直島・地中美術館・家プロジェクト鑑賞 → 豊島へ移動 → 豊島美術館 → 漁師民宿・新鮮魚介の夕食</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 3</span>
+            <p class="itinerary-day-content">早朝漁師船乗船体験 → 犬島 → 犬島精錬所美術館 → 船上ガストロノミーランチ → 尾道着</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 4</span>
+            <p class="itinerary-day-content">尾道古寺巡り（千光寺・浄土寺） → 造船の町・尾道食文化体験 → 瀬戸内産食材ガストロノミーディナー</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 5</span>
+            <p class="itinerary-day-content">フリータイム → 尾道または岡山空港送迎 → 出発</p>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 含まれるもの / 含まれないもの -->
+        <div class="incl-grid">
+          <div>
+            <span class="modal-section-title">含まれるもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>チャータークルーザー費用</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>全宿泊費（ベネッセハウス等）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>専属ガイド・コーディネート料</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>全美術館入場料</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>ガストロノミーミール（夕食・昼食）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>漁師体験・船上料理費</div>
+            </div>
+          </div>
+          <div>
+            <span class="modal-section-title">含まれないもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>航空券・新幹線等交通費</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>朝食費（一部）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>個人的費用・お土産</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>旅行保険</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- その他情報 -->
+        <span class="modal-section-title">その他情報</span>
+        <p class="modal-other-text">
+          最少催行人数：2名 / 最大：10名<br>
+          最適シーズン：4月〜11月（瀬戸内国際芸術祭期間は特に人気）<br>
+          日程はゲストのご要望により調整可能。アート重視・食重視などカスタマイズ対応。
+        </p>
+
+
+        <!-- 動画リンク -->
+        <div class="modal-link-row">
+          <a href="https://youtu.be/yys-Nq-1h2Y" target="_blank" rel="noopener noreferrer" class="modal-ext-link" id="setouchi-movie-link">
+            &#9654; イメージムービーを見る <!-- 動画URLをここに設定 -->
+          </a>
+        </div>
+
+        <button class="modal-inq-btn" onclick="openInquiry('瀬戸内ガストロノミークルーズ')">
+          このツアーについてお問い合わせ →
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 直島・豊島アートトリップ
+  ════════════════════════════════════════════════ -->
+  <div id="modal-naoshima" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="直島・豊島アートトリップ詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/naoshima.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/0d83667a-0572-46cb-b89e-9ff364b275bf" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Naoshima &amp; Teshima Art Journey</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">直島・豊島 アートトリップ</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('naoshima')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+
+        <!-- 旅行概要 -->
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">
+          瀬戸内の島々をキャンバスに「島とアートの共生」を体験する、世界に類のないプレミアムジャーニー。地中美術館（安藤忠雄設計）・豊島美術館・家プロジェクトなど現代アートの聖地を、専任ガイドとプライベートチャーターで巡ります。アートを語る島人との対話、瀬戸内の食、四季の光と潮風が織り成す唯一無二の体験です。
+        </p>
+        <div class="modal-divider"></div>
+
+        <!-- 3つのポイント -->
+        <span class="modal-section-title">3つのポイント</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">世界に類のない「島×現代アート」</p>
+              <p class="modal-point-desc">地中美術館・豊島美術館・家プロジェクト・ANDO MUSEUM……建築とアートと自然が一体化した空間を、混雑を避けたプライベートタイムで堪能。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">島のお年寄りが語る「生きたアート体験」</p>
+              <p class="modal-point-desc">現代アートを日常語る地元の方々との交流は、どのガイドブックにも載らない直島の本質。旅人と島が重なる瞬間を演出します。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">瀬戸内の食と宿——本物の豊かさ</p>
+              <p class="modal-point-desc">ベネッセハウスやオーベルジュに代表される上質な宿と、瀬戸内の旬の食材を使うシェフの食事。体験の「深度」を最大化するロイヤルエクスペリエンスの選択眼でセレクト。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 旅行プラン -->
+        <span class="modal-section-title">旅行プラン（例：3泊4日）</span>
+        <div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 1</span>
+            <p class="itinerary-day-content">岡山駅集合 → 宇野港 → 直島入島 → ANDO MUSEUM・李禹煥美術館 → ベネッセハウス泊</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 2</span>
+            <p class="itinerary-day-content">地中美術館（モネ・タレル・デ・マリア） → 本村エリア「家プロジェクト」散策 → 島の方々との交流ランチ → 直島泊</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 3</span>
+            <p class="itinerary-day-content">チャーター船で豊島へ → 豊島美術館（内藤礼）→ 豊島横尾館 → 棚田と集落散策 → 高松・オーベルジュ泊</p>
+          </div>
+          <div class="itinerary-day">
+            <span class="itinerary-day-label">Day 4</span>
+            <p class="itinerary-day-content">小豆島または犬島オプション → 高松港 → 各自解散（岡山・高松・大阪方面へ送迎可）</p>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- 含まれるもの / 含まれないもの -->
+        <div class="incl-grid">
+          <div>
+            <span class="modal-section-title">含まれるもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>宿泊費（全泊・厳選宿）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>専任英語アートガイド</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>島間チャーター船手配</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>主要美術館入場料</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>厳選ランチ・ディナー（指定食事）</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-yes"></span>現地送迎・移動手配</div>
+            </div>
+          </div>
+          <div>
+            <span class="modal-section-title">含まれないもの</span>
+            <div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>航空券・新幹線等国内交通費</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>朝食（一部）・個人的飲食</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>旅行保険</div>
+              <div class="incl-item"><span class="incl-dot incl-dot-no"></span>個人的な土産・買い物</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <!-- その他情報 -->
+        <span class="modal-section-title">その他情報</span>
+        <p class="modal-other-text">
+          最少催行人数：2名 / 最大：10名<br>
+          最適シーズン：春（3月〜5月）・秋（9月〜11月）。瀬戸内国際芸術祭開催期間（3年ごと）は特に人気のため早めのご相談を。<br>
+          日程・訪問先・宿はゲストのご要望に応じてカスタマイズ可能。法人リトリートとしての利用も対応。
+        </p>
+
+        <button class="modal-inq-btn" onclick="openInquiry('直島・豊島アートトリップ')">
+          このツアーについてお問い合わせ →
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — ムスリム向けCulinary Tour「和食旅」
+  ════════════════════════════════════════════════ -->
+  <div id="modal-washoku" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="ムスリム向けCulinary Tour「和食旅」詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/washoku.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c09fe2b9-5b61-4e1c-8f9a-020319950dff" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Washoku-Tabi / Muslim Culinary Tour</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">ムスリム向けCulinary Tour「和食旅」</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('washoku')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">日本の食文化の特徴を、さまざまな地域での体験型旅行を通じて学ぶ12日間／11泊の本格CulinaryTour。市場やレストラン、生産現場、加工工場、リアルな地元の生活環境などを巡り、食材・調理法・調理器具・食器・盛り付け・作法まで幅広く体験。ムスリムのお客様の食文化・食習慣・ルールに配慮した形で対応可能（ハラル対応・お祈り時間/スペースの確保など）。全日程に通訳が帯同。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">幅広い食文化体験</p>
+              <p class="modal-point-desc">産地・市場・レストラン・加工工場を巡り、食材から食器まで日本の食文化を多角的に体験できます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">ムスリム対応万全</p>
+              <p class="modal-point-desc">ハラル対応はもちろん、お祈り時間・スペースの確保など、ムスリムゲストが快適に楽しめるよう配慮。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">通訳・コーディネート同行</p>
+              <p class="modal-point-desc">全行程に通訳が帯同し、生産者や料理人との深いコミュニケーションをサポート。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">旅程：12日間／11泊
+対象：ムスリム旅行者・ハラル対応希望グループ
+通訳：全日程帯同（日本語・英語・現地語対応）
+カスタマイズ：ルート・日数・食材テーマなどご要望に応じて調整可</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベース受付。担当：清水 info@loyalx.co.jp</p>
+        <button class="modal-inq-btn" onclick="openInquiry('ムスリム向けCulinary Tour「和食旅」')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【山口】伝統工芸とマインドフルネスを巡る旅
+  ════════════════════════════════════════════════ -->
+  <div id="modal-hagi" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【山口】伝統工芸とマインドフルネスを巡る旅詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/hagi.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Hagi-Nagato / Traditional Crafts & Mindfulness</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【山口】伝統工芸とマインドフルネスを巡る旅</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('hagi')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">山口県・萩長門エリアで伝統工芸とスピリチュアルな体験を融合させた2泊3日のプログラム。萩焼の名工工房へのプライベート招待から、神仏習合の秘湯「恩湯」早朝貸切、元乃隅神社参拝、地元名店での夕食まで、山口の奥深い文化に浸る旅。宿泊は大谷山荘の新館「音信」。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">萩焼工房プライベート体験</p>
+              <p class="modal-point-desc">名工の解説付きで作品鑑賞・購入。ここでしか手に入らない一点物を、作家本人から直接購入できます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">神仏習合の秘湯「恩湯」早朝貸切</p>
+              <p class="modal-point-desc">元乃隅神社・恩湯（早朝貸切）など、精神性の高いスポットを歴史を学びながら巡ります。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">大谷山荘「音信」宿泊</p>
+              <p class="modal-point-desc">地産地消の食事と上質な宿泊でリフレッシュ。橋倉鮮魚「とさや」での夕食も可能。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">旅程：2泊3日（年末年始除く）
+費用：20万円〜/人
+人数：2〜5名程度（応相談）
+集合：JR新山口駅 or 北九州駅
+通訳：日常会話英語対応（フル通訳は+10万円/名）
+キャンセル：30日前まで10%、14日前以降50%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">OP通訳（英語・中国語）、Levo宿泊への変更（+15万円/泊）など柔軟にカスタマイズ可能。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【山口】伝統工芸とマインドフルネスの旅')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【富山】「百年倶楽部」三郎丸ウイスキーVIPツアー
+  ════════════════════════════════════════════════ -->
+  <div id="modal-whisky" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【富山】「百年倶楽部」三郎丸ウイスキーVIPツアー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/whisky.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">"Sanroku Club" Whisky VIP Tour Toyama</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【富山】「百年倶楽部」三郎丸ウイスキーVIPツアー</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('whisky')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">70年の歴史を誇る三郎丸蒸留所で都内では入手困難な「三郎丸シリーズ」の原酒を特別試飲。「百年倶楽部」限定のプライベートカスクから自分だけの1本をボトリング。日本唯一のボトラーズ「T&T TOYAMA」への招待後、富山を代表するデスティネーションレストラン「LEVO」でガストロノミーディナー＆宿泊。ウイスキー・寿司・日本酒という富山の魅力を通じ「わざわざ訪れる価値」の体験を提供。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">三郎丸蒸留所 プレミアムツアー＆ボトリング</p>
+              <p class="modal-point-desc">蒸留所の案内をしながら都内では入手不可の原酒を試飲。「百年倶楽部」限定カスクから1本をプライベートボトリング（先着限定）。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">T&T TOYAMA プライベート招待＆試飲</p>
+              <p class="modal-point-desc">日本唯一のボトラーズへ特別招待。稲垣貴彦氏のセレクションを試飲し、ウイスキーの奥深さを学ぶ。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">LEVO ガストロノミーディナー＆宿泊</p>
+              <p class="modal-point-desc">富山の厳選食材を使うデスティネーションレストランで特別ディナー。プレミアム日本酒「IWA」との特別ペアリング付き。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">旅程：1泊2日〜2泊3日（年末年始除く）
+費用：1名40万円・2名70万円・3名95万円・4名120万円（税別）
+集合：JR大宮駅
+OP通訳：英語+10万円/日、Levo宿泊変更+15万円/泊
+キャンセル：31日前まで10%、30〜15日前30%、14〜1日前50%、当日100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">1人以上から受付。開催希望日の45日前までにリクエストベースでお申込みください。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【富山】三郎丸ウイスキーVIPツアー')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【京都】仁和寺 非公開エリア宿泊プラン
+  ════════════════════════════════════════════════ -->
+  <div id="modal-ninnaji" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】仁和寺 非公開エリア宿泊プラン詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/ninnaji.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Ninnaji / Kyoto Imperial Heritage</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【京都】仁和寺 非公開エリア宿泊プラン</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('ninnaji')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">皇室と縁の深い世界遺産・仁和寺へプライベートご招待。国宝や重要文化財に指定された通常非公開の御堂や寺宝を、僧侶と共に拝観。悠久の歴史と文化、宗教観に深く触れる1泊2日。閉門後の仁和寺御殿にてお食事、雅楽鑑賞、仁和寺に伝わる御室流生け花体験なども可能。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">国宝・非公開エリアへのプライベート拝観</p>
+              <p class="modal-point-desc">通常一般公開されていない御堂や寺宝を、僧侶の解説付きでじっくりと巡ります。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">閉門後の御殿体験</p>
+              <p class="modal-point-desc">閉門後、静寂の境内でお食事・雅楽鑑賞・御室流生け花体験をご用意。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">皇室由来の文化と歴史</p>
+              <p class="modal-point-desc">仁和寺の独自コンテンツを通じ、日本の宗教観・美意識・歴史を深く体感いただけます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">費用：150万円/組（税・サービス料15%別）
+催行人数：1〜4名
+所要時間：1泊2日〜
+開催期間：年末年始を除く
+対応言語：日本語・英語
+キャンセル：60日前まで10%、59〜30日前20%、29〜15日前30%、14日前以降100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベースで受付。日程・内容はご要望に応じて相談可能。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【京都】仁和寺 非公開エリア宿泊プラン')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【京都】智積院 静寂と伝統の宿泊体験
+  ════════════════════════════════════════════════ -->
+  <div id="modal-chishakuin" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】智積院 静寂と伝統の宿泊体験詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/chishakuin.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Chishakuin / Zen & Silence Kyoto</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【京都】智積院 静寂と伝統の宿泊体験</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('chishakuin')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">京都・智積院にプライベートご招待。国宝の庭園や長谷川等伯の襖絵を独占鑑賞し、静寂のひとときをお楽しみいただけます。ご要望に応じて、阿字観（瞑想）や写経を通じた心身を整える特別な機会を個別開催。夜は智積院会館に宿泊し、朝のお勤め・坐禅・僧侶による拝観案内で心の旅を深める1泊2日。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">国宝庭園・襖絵の独占鑑賞</p>
+              <p class="modal-point-desc">長谷川等伯の名作を独占で鑑賞。専門解説付きで、日本美術史上の傑作に深く触れます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">阿字観・写経・坐禅体験</p>
+              <p class="modal-point-desc">個別開催の瞑想・写経セッションで心身を整え、日常から離れた深い静寂の時間を体験。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">智積院会館宿泊と朝の勤行</p>
+              <p class="modal-point-desc">夜明けの境内で僧侶と共に朝の勤行に参加。精神的な充足感と共に旅を締めくくります。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">費用：35万円税別/組
+催行人数：1〜4名
+所要時間：1泊2日
+開催期間：年末年始を除く
+対応言語：日本語・英語
+キャンセル：60日前まで10%、59〜30日前20%、29〜15日前50%、14日前以降100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベースで受付。瞑想テーマの深さなどカスタマイズ可能。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【京都】智積院 静寂と伝統の宿泊体験')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【京都】西本願寺 非公開エリアへご招待
+  ════════════════════════════════════════════════ -->
+  <div id="modal-nishihonganji" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】西本願寺 非公開エリアへご招待詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/nishihonganji.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/3bfe330e-67bc-46b1-96ba-ed55ab75d973" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Nishi Honganji / UNESCO Sacred Heritage</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【京都】西本願寺 非公開エリアへご招待</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('nishihonganji')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">世界遺産・西本願寺の非公開エリア「鴻の間」や名勝庭園「虎渓の庭」に特別ご招待。プライベートな参拝をお楽しみいただいた後、茶席でのおもてなしをご用意。着付けを行い、お着物で境内を巡っていただくことも可能。お子様の前撮りやファミリー記念撮影にもご活用いただけます。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">非公開エリア「鴻の間」へのご招待</p>
+              <p class="modal-point-desc">通常一般公開されていない格式高いエリアを、専門ガイドの解説と共にご案内します。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">名勝庭園「虎渓の庭」と茶席</p>
+              <p class="modal-point-desc">国の名勝に指定された庭園を鑑賞後、落ち着いた雰囲気の茶席でおもてなし。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">お着物着付け体験</p>
+              <p class="modal-point-desc">境内での着物散策体験や記念撮影も可能。家族でのお着物前撮りにもご利用いただけます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">費用：30万円税別/組
+催行人数：2〜6名
+所要時間：約4時間
+開催期間：年末年始を除く
+対応言語：日本語・英語
+キャンセル：60日前まで10%、59〜30日前20%、29〜15日前50%、14日前以降100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベースで受付。着物・茶席・写真撮影などオプションもご相談ください。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【京都】西本願寺 非公開エリアへの招待')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【滋賀】永治屋清左衛門 着物プライベートオーダー
+  ════════════════════════════════════════════════ -->
+  <div id="modal-nishiya" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【滋賀】永治屋清左衛門 着物プライベートオーダー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/nishiya.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/afb9cfce-4bcf-41ce-8366-3c239ef2f8de" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Nishiya Seizaemon / 230-Year Kimono Atelier</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【滋賀】永治屋清左衛門 着物プライベートオーダー</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('nishiya')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">創業230年の老舗・永治屋清左衛門の工房で、世界に一点だけの着物・帯をプライベートオーダー。通常は分業制のため受注が難しい一点物ですが、染織文化財の復元・修復事業で培われた技術で制作。永井織物本社に所蔵する古代染織品や工芸文化財をご覧いただきながら、職人の技を五感で感じる特別な1日。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">プライベートオーダーで世界に一点の着物</p>
+              <p class="modal-point-desc">色無地・小紋・袋帯など、自分だけの一点を名工から直接オーダー。通常の受注では難しい特別な依頼が可能。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">古代染織品・工芸文化財の鑑賞</p>
+              <p class="modal-point-desc">非公開の所蔵品を間近で鑑賞しながら、日本の染織の歴史と美意識を深く学べます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">工房見学と職人との対話</p>
+              <p class="modal-point-desc">実際の制作工程を見学し、職人との直接の対話を通じてものづくりの精神に触れます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">費用：色無地45万円〜・小紋60万円〜・袋帯55万円〜
+催行人数：1〜3名
+所要時間：1日がかり（京都から片道約3時間、工房で約2時間）
+開催期間：年末年始除く
+対応言語：日本語・英語
+キャンセル：30日前まで10%、29〜7日前30%、6日前以降100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベースで受付。制作には数ヶ月かかるため、お早めにご相談ください。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【滋賀】永治屋清左衛門 着物プライベートオーダー')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOUR MODAL — 【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー
+  ════════════════════════════════════════════════ -->
+  <div id="modal-sakai" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/sakai.jpg" data-gcs="https://storage.googleapis.com/production-os-assets/assets/c09fe2b9-5b61-4e1c-8f9a-020319950dff" alt="" onerror="if(this.dataset.gcs){var g=this.dataset.gcs;this.dataset.gcs='';this.src=g;}else{this.style.display='none';}">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:#A89274;display:block;margin-bottom:0.4rem;">Sakai Knife / Forging & Private Order</span>
+            <h2 style="font-family:'Noto Serif JP',serif;font-size:1.45rem;font-weight:300;color:#fff;line-height:1.3;margin:0;">【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー</h2>
+          </div>
+        </div>
+      </div>
+      <button class="tour-modal-close" onclick="closeTourModal('sakai')" aria-label="閉じる">✕</button>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">旅行概要</span>
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:300;color:#444;line-height:1.95;margin-bottom:0;">世界のミシュラン星付きシェフも愛用する堺打刃物の鍛錬・研ぎを体験し、自分だけのプライベート包丁を入手できる特別プログラム。鋼の種類や包丁の形状もセレクト可能。堺が誇る一流の鍛冶屋・研師に世界に1本のオリジナル包丁をプライベートオーダーできます。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">ハイライト</span>
+        <div>
+          <div class="modal-point">
+            <span class="modal-point-num">1</span>
+            <div>
+              <p class="modal-point-title">鍛錬・研ぎを職人と共に体験</p>
+              <p class="modal-point-desc">実際の鍛錬と研ぎの工程を体験し、職人の技術と精神を間近で感じます。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">2</span>
+            <div>
+              <p class="modal-point-title">鋼・形状のセレクト体験</p>
+              <p class="modal-point-desc">鋼の種類（白鋼・青鋼など）や形状（牛刀・出刃・柳刃など）を職人と相談しながら選択。</p>
+            </div>
+          </div>
+          <div class="modal-point">
+            <span class="modal-point-num">3</span>
+            <div>
+              <p class="modal-point-title">世界に一本のオリジナル包丁</p>
+              <p class="modal-point-desc">自分の名前を彫刻した特注包丁は、最高のお土産かつ一生物の料理道具になります。</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">料金・条件</span>
+        <p class="modal-other-text">費用：10万円/人
+催行人数：2〜6名
+所要時間：約4時間
+開催期間：事前ご相談（随時受付）
+対応言語：日本語・英語
+キャンセル：予約時以降10%、60日前まで30%、59〜30日前30%、14日以降100%</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">その他</span>
+        <p class="modal-other-text">リクエストベースで受付。包丁の仕上がりは約3〜4週間後、国際配送対応可能。</p>
+        <button class="modal-inq-btn" onclick="openInquiry('【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー')">
+          このツアーについてお問い合わせ →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       INQUIRY FORM MODAL
+  ════════════════════════════════════════════════ -->
+  <div id="modal-inquiry" class="inquiry-overlay" role="dialog" aria-modal="true" aria-label="お問い合わせフォーム">
+    <div class="inquiry-box">
+      <button class="inquiry-close" onclick="closeInquiry()" aria-label="閉じる">✕</button>
+
+      <span class="section-label" style="display:block;margin-bottom:0.6rem;">Contact</span>
+      <h2 style="font-family:'Noto Serif JP',serif;font-size:1.35rem;font-weight:300;color:#0d1b3e;line-height:1.3;margin-bottom:0.5rem;">旅のご相談・お問い合わせ</h2>
+      <div style="width:40px;height:1px;background:#A89274;margin-bottom:1.75rem;"></div>
+
+      <form id="inquiry-form" onsubmit="submitInquiry(event)" novalidate>
+
+        <div class="inq-field">
+          <label class="inq-label" for="inq-tour">ご希望のツアー / Tour of Interest</label>
+          <select id="inq-tour" class="inq-select">
+            <option value="">-- ツアーを選択（複数ご相談も可） --</option>
+            <option value="四国遍路VIPツアー">四国遍路 VIPツアー（Shikoku Henro）</option>
+            <option value="瀬戸内ガストロノミークルーズ">瀬戸内ガストロノミークルーズ（Setouchi Gastronomy）</option>
+            <option value="直島・豊島アートトリップ">直島・豊島アートトリップ（Naoshima &amp; Teshima Art Journey）</option>
+            <option value="ムスリム向けCulinary Tour「和食旅」">ムスリム向けCulinary Tour「和食旅」（Washoku-Tabi）</option>
+            <option value="【山口】伝統工芸とマインドフルネスの旅">【山口】伝統工芸とマインドフルネスの旅（Hagi-Nagato）</option>
+            <option value="【富山】三郎丸ウイスキーVIPツアー">【富山】三郎丸ウイスキーVIPツアー（Sanroku Club）</option>
+            <option value="【京都】仁和寺 非公開エリア宿泊プラン">【京都】仁和寺 非公開エリア宿泊プラン（Ninnaji）</option>
+            <option value="【京都】智積院 静寂と伝統の宿泊体験">【京都】智積院 静寂と伝統の宿泊体験（Chishakuin）</option>
+            <option value="【京都】西本願寺 非公開エリアへの招待">【京都】西本願寺 非公開エリアへの招待（Nishi Honganji）</option>
+            <option value="【滋賀】永治屋清左衛門 着物プライベートオーダー">【滋賀】永治屋清左衛門 着物プライベートオーダー（Nishiya Seizaemon）</option>
+            <option value="【大阪】堺打刃物 鍛錬・研ぎ体験">【大阪】堺打刃物 鍛錬・研ぎ体験（Sakai Knife）</option>
+            <option value="複数のツアーを組み合わせたい">複数のツアーを組み合わせたい</option>
+            <option value="その他・未定">その他・カスタムプランを相談したい</option>
+          </select>
+        </div>
+
+        <div class="inq-row" style="margin-bottom:1rem;">
+          <div>
+            <label class="inq-label" for="inq-name">お名前 / Name <span style="color:#A89274;">*</span></label>
+            <input type="text" id="inq-name" class="inq-input" placeholder="例：Yamada Taro" required>
+          </div>
+          <div>
+            <label class="inq-label" for="inq-country">国・地域 / Country <span style="color:#A89274;">*</span></label>
+            <input type="text" id="inq-country" class="inq-input" placeholder="例：Japan / Mexico / UK" required>
+          </div>
+        </div>
+
+        <div class="inq-field">
+          <label class="inq-label" for="inq-email">メールアドレス / Email <span style="color:#A89274;">*</span></label>
+          <input type="email" id="inq-email" class="inq-input" placeholder="your@email.com" required>
+        </div>
+
+        <div class="inq-row" style="margin-bottom:1rem;">
+          <div>
+            <label class="inq-label" for="inq-start">旅行希望開始日 / Start Date</label>
+            <input type="date" id="inq-start" class="inq-input">
+          </div>
+          <div>
+            <label class="inq-label" for="inq-end">旅行希望終了日 / End Date</label>
+            <input type="date" id="inq-end" class="inq-input">
+          </div>
+        </div>
+
+        <div class="inq-row" style="margin-bottom:1rem;">
+          <div>
+            <label class="inq-label" for="inq-adults">大人人数（13歳以上）</label>
+            <input type="number" id="inq-adults" class="inq-input" min="1" max="20" placeholder="2">
+          </div>
+          <div>
+            <label class="inq-label" for="inq-children">子供人数（12歳以下）</label>
+            <input type="number" id="inq-children" class="inq-input" min="0" max="20" placeholder="0">
+          </div>
+        </div>
+
+        <div class="inq-field">
+          <label class="inq-label" for="inq-needs">アレルギー・特別なニーズ / Special Needs</label>
+          <textarea id="inq-needs" class="inq-textarea" placeholder="食事制限（ヴィーガン・グルテンフリー等）、バリアフリー要件、その他ご要望があればご記入ください。"></textarea>
+        </div>
+
+        <div class="inq-field">
+          <label class="inq-label" for="inq-message">旅のご要望・ご質問 / Message <span style="color:#A89274;">*</span></label>
+          <textarea id="inq-message" class="inq-textarea" placeholder="ご希望の旅程概要、カスタマイズのご要望、ご予算感、ご質問など自由にご記載ください。" style="min-height:100px;" required></textarea>
+        </div>
+
+        <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.72rem;color:#aaa;line-height:1.8;margin-bottom:1rem;">
+          ご記入いただいた情報はご相談への回答のみに使用します。通常3営業日以内にご返答いたします。
+        </p>
+
+        <button type="submit" class="inq-submit">送信する — Send Inquiry →</button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="ページトップへ戻る">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M8 12V4M4 8l4-4 4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+
+  <!-- ════════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════════ -->
+  <script>
+    /* ─── Header scroll behavior ─── */
+    const header    = document.getElementById('header');
+    const backToTop = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+        backToTop.classList.add('visible');
+      } else {
+        header.classList.remove('scrolled');
+        backToTop.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    /* ─── Back to top ─── */
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ─── Mobile menu ─── */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu  = document.getElementById('close-menu');
+    const ham1 = document.getElementById('ham1');
+    const ham2 = document.getElementById('ham2');
+    const ham3 = document.getElementById('ham3');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      ham1.style.transform = 'translateY(7px) rotate(45deg)';
+      ham2.style.opacity   = '0';
+      ham3.style.transform = 'translateY(-7px) rotate(-45deg)';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      ham1.style.transform = '';
+      ham2.style.opacity   = '';
+      ham3.style.transform = '';
+    }
+
+    hamburger.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    /* ─── Smooth scroll ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const href = anchor.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (!target) return;
+        const offset = 76;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    /* ─── Intersection Observer (reveal) ─── */
+    const reveals  = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+    reveals.forEach(el => revealObs.observe(el));
+
+    /* Hero items reveal on load */
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
+      }, 250);
+    });
+
+    /* ─── Active nav highlight on scroll ─── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === `#${current}` ? '#A89274' : '';
+      });
+    }, { passive: true });
+
+    /* ─── Tour Modals ──────────────────────────── */
+    function openTourModal(id) {
+      const el = document.getElementById('modal-' + id);
+      if (!el) return;
+      el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      el.scrollTop = 0;
+    }
+
+    function closeTourModal(id) {
+      const el = document.getElementById('modal-' + id);
+      if (!el) return;
+      el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ─── Inquiry Modal ────────────────────────── */
+    function openInquiry(tourName) {
+      /* Pre-select tour in dropdown */
+      const tourSel = document.getElementById('inq-tour');
+      if (tourSel && tourName) {
+        for (let i = 0; i < tourSel.options.length; i++) {
+          if (tourSel.options[i].value === tourName) {
+            tourSel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      /* Close any open tour modal first */
+      document.querySelectorAll('.tour-modal-overlay').forEach(m => m.classList.remove('open'));
+      /* Open inquiry */
+      const inqEl = document.getElementById('modal-inquiry');
+      inqEl.classList.add('open');
+      inqEl.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeInquiry() {
+      document.getElementById('modal-inquiry').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ─── Close on overlay backdrop click ─────── */
+    document.querySelectorAll('.tour-modal-overlay, .inquiry-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    /* ─── Close on ESC key ─────────────────────── */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.tour-modal-overlay.open, .inquiry-overlay.open').forEach(m => {
+          m.classList.remove('open');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* ─── Inquiry form submit (mailto) ────────── */
+    function submitInquiry(e) {
+      e.preventDefault();
+      const tour     = document.getElementById('inq-tour').value     || '（未選択）';
+      const name     = document.getElementById('inq-name').value;
+      const country  = document.getElementById('inq-country').value;
+      const email    = document.getElementById('inq-email').value;
+      const start    = document.getElementById('inq-start').value    || '未定';
+      const end      = document.getElementById('inq-end').value      || '未定';
+      const adults   = document.getElementById('inq-adults').value   || '-';
+      const children = document.getElementById('inq-children').value || '0';
+      const needs    = document.getElementById('inq-needs').value    || 'なし';
+      const message  = document.getElementById('inq-message').value;
+
+      if (!name || !country || !email || !message) {
+        alert('お名前・国・メールアドレス・メッセージは必須項目です。');
+        return;
+      }
+
+      const subject = encodeURIComponent('[INQUIRY] ' + tour + ' — ' + name);
+      const body = encodeURIComponent(
+        '【お問い合わせ内容 / Inquiry】\
+\
+' +
+        'ご希望ツアー: ' + tour + '\
+' +
+        'お名前: ' + name + '\
+' +
+        '国・地域: ' + country + '\
+' +
+        'メールアドレス: ' + email + '\
+' +
+        '旅行希望期間: ' + start + ' ～ ' + end + '\
+' +
+        '人数: 大人 ' + adults + '名 / 子供 ' + children + '名\
+' +
+        'アレルギー・特別ニーズ: ' + needs + '\
+\
+' +
+        '【ご要望・ご質問 / Message】\
+' + message
+      );
+
+      window.location.href = 'mailto:info@loyalx.co.jp?subject=' + subject + '&body=' + body;
+    }
+
+    /* ── Video lazy-load: replace thumbnail with iframe on click ── */
+    function playVideo(thumbEl, videoId) {
+      var aspect = thumbEl.parentElement;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + videoId +
+        '?autoplay=1&rel=0&modestbranding=1&color=white';
+      iframe.title = thumbEl.getAttribute('aria-label') || 'Video';
+      iframe.frameBorder = '0';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+      aspect.replaceChild(iframe, thumbEl);
+    }
+  </script>
+
+  <!-- YouTube IFrame API: hero video error fallback -->
+  <script>
+    (function() {
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    })();
+
+    window.onYouTubeIframeAPIReady = function() {
+      new YT.Player('hero-yt-player', {
+        events: {
+          onError: function(e) {
+            // Error 153 = embedding not allowed on this domain / video unavailable
+            var bg = document.getElementById('hero-video-bg');
+            if (bg) {
+              bg.style.opacity = '0';
+              bg.style.pointerEvents = 'none';
+              // Keep gradient fallback (hero-bg-img) visible
+            }
+          }
+        }
+      });
+    };
+  </script>
+
+
+  <!-- ═══════════════════════════════════════════
+       LANGUAGE TOGGLE: EN / JA
+  ═══════════════════════════════════════════ -->
+  <script>
+  (function(){
+    var TRANSLATIONS = {
+      /* ── Hero ── */
+      'hero-tag':       { ja:'— Loyal Experience Co., Ltd. / Tokyo, Japan', en:'— Loyal Experience Co., Ltd. / Tokyo, Japan' },
+      'hero-h1':        { ja:'「ものづくり」を<br><span class="text-gold">「かちづくり」</span>へ',
+                          en:'From "Monozukuri"<br>to <span class="text-gold">"Kachizukuri"</span>' },
+
+      /* ── About ── */
+      'about-label':    { ja:'About Us', en:'About Us' },
+      'about-h2':       { ja:'世の中の<br><span class="text-gold">“付加価値”</span>を増やす',
+                          en:'Bringing Japan’s value to the world<br>through marketing and experience.' },
+      'about-p':        { ja:'私たちは、企業と地方に<span class="text-gold font-medium">付加価値を生み出す</span>マーケティングカンパニーです。<br>日本の強みであるものづくり、技術や文化、資源の価値を見つめ直し、<br>生活者やインバウンド富裕層に、より伝わるかたちへと磨き上げ、選ばれる<span class="text-gold font-medium">"価値"</span>へと育てていきます。',
+                          en:'We are a marketing company that creates <span class="text-gold font-medium">added value</span> for businesses and regions.<br>We rediscover Japan’s strengths in craftsmanship, culture, and local resources,<br>refining them into a compelling <span class="text-gold font-medium">"value"</span> that resonates with affluent inbound travelers worldwide.' },
+
+      /* ── Inbound Section ── */
+      'inbound-label':  { ja:'Inbound Luxury Experience', en:'Inbound Luxury Experience' },
+      'inbound-h2':     { ja:'地方創生 × インバウンド<br><span class="text-gold">体験事業</span>', en:'Local Revitalization × Inbound<br><span class="text-gold">Experience Business</span>' },
+      'inbound-p':      { ja:'観光地ではなく「体験地」へ。外国人富裕層が本当に求める、深くて本物の日本を提供します。アート・文化・食・精神性——それぞれの興味に合わせた、唯一無二のプライベートツアーを造成しています。',
+                          en:'Beyond sightseeing — we curate "experience destinations." We provide the deep, authentic Japan that affluent international travelers truly seek: art, culture, cuisine, and spirituality, all tailored into one-of-a-kind private journeys.' },
+
+      /* ── Marketing Section ── */
+      'mkt-label':      { ja:'Marketing & DX', en:'Marketing & DX' },
+      'mkt-h2':         { ja:'マーケティング支援<br><span class="text-gold">× DX 支援事業</span>', en:'Marketing Support<br><span class="text-gold">× DX Business</span>' },
+      'mkt-p':          { ja:'戦略立案から実装・改善まで、マーケティングのすべての領域で企業を支援します。デジタル・AI・データを活用し、確実に成果へ導きます。',
+                          en:'We support companies across all marketing domains — from strategy to execution and optimization. Leveraging digital tools, AI, and data, we drive measurable results.' },
+      'case-label':     { ja:'Case Studies', en:'Case Studies' },
+      'case-sub':       { ja:'主要なマーケティング・DX支援事例', en:'Key Marketing & DX Projects' },
+
+      /* ── Company ── */
+      'company-label':  { ja:'Company', en:'Company' },
+      'company-h2':     { ja:'会社概要 ・ 代表プロフィール', en:'Company & Profile' },
+
+      /* ── Contact ── */
+      'contact-label':  { ja:'Contact', en:'Contact' },
+      'contact-h2':     { ja:'今ある「ものづくり」を活かして<span class="text-gold">新しい「価値」を創る。</span>', en:'Inquiries' },
+      'contact-p':      { ja:'ツアーのご相談、マーケティング支援のご依頼など、お気軽にご連絡ください。', en:'Feel free to reach out for tour inquiries, marketing consultations, or partnership discussions.' },
+
+      /* ── Footer ── */
+      'footer-tagline': { ja:'かちづくりカンパニー。<br>マーケティングと体験で<br>日本の価値を世界へ。',
+                          en:'A value-creation company.<br>Bringing Japan’s value to the world<br>through marketing and experience.' },
+      'footer-nav-lbl': { ja:'Navigation', en:'Navigation' },
+      'footer-inbound': { ja:'インバウンド富裕層体験事業', en:'Inbound Luxury Experience' },
+      'footer-mkt':     { ja:'マーケティング・DX支援', en:'Marketing & DX Support' },
+      'footer-co':      { ja:'会社概要・プロフィール', en:'Company & Profile' },
+      'footer-contact': { ja:'お問い合わせ', en:'Inquiries' },
+    };
+
+    var currentLang = 'ja';
+
+    window.toggleLang = function(){
+      currentLang = (currentLang === 'ja') ? 'en' : 'ja';
+      applyLang(currentLang);
+
+      // Update button labels
+      var btns = document.querySelectorAll('#lang-toggle-header, #lang-toggle-footer');
+      btns.forEach(function(b){
+        b.textContent = (currentLang === 'en') ? '日本語' : 'ENGLISH';
+      });
+    };
+
+    function applyLang(lang){
+      // data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(function(el){
+        var key = el.getAttribute('data-i18n');
+        if(TRANSLATIONS[key] && TRANSLATIONS[key][lang] !== undefined){
+          el.innerHTML = TRANSLATIONS[key][lang];
+        }
+      });
+
+      // Show/hide lang-specific blocks
+      document.querySelectorAll('.ja-only').forEach(function(el){
+        el.style.display = (lang === 'ja') ? '' : 'none';
+      });
+      document.querySelectorAll('.en-only').forEach(function(el){
+        el.style.display = (lang === 'en') ? '' : 'none';
+      });
+    }
+  })();
+  </script>
+
+</body>
