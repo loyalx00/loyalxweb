@@ -7,13 +7,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="株式会社ロイヤルエクスペリエンス - マーケティング支援・AI支援・インバウンド富裕層×地方創生事業。代表：清水耕太郎。かちづくりカンパニー。">
+  <meta name="description" content="株式会社ロイヤルエクスペリエンス - 代表清水耕太郎が率いる、マーケティング×AI支援・インバウンド富裕層×地方創生事業のエキスパート。">
   <meta name="keywords" content="マーケティング支援,AI支援,インバウンド,地方創生,四国遍路,瀬戸内,ロイヤルエクスペリエンス,清水耕太郎">
   <meta property="og:title" content="インバウンド富裕層＆AIマーケティング｜ロイヤルエクスペリエンス">
   <meta property="og:description" content="企業や地方の課題解決をマーケティングとAIの力で支援。「ものづくり」の強みを、マーケティングで磨き上げて「価値」に変える。私たちは、付加価値を生み出すマーケティング＆プロデュースカンパニーです。AIからDXからインバウンド富裕層まで、あらゆる課題解決に伴走します。">
   <meta property="og:url" content="https://loyalx.co.jp">
   <meta property="og:type" content="website">
-  <title>インバウンド富裕層×マーケティング｜ロイヤルエクスペリエンス</title>
+  <title>インバウンド富裕層×地方創生×マーケティング｜ロイヤルエクスペリエンス</title>
   <link rel="icon" type="image/png" href="images/LX_logo.png">
   <link rel="shortcut icon" href="images/LX_logo.png">
 
@@ -178,7 +178,10 @@
       position: absolute; inset: 0;
       overflow: hidden; pointer-events: none;
       z-index: 0;
+      opacity: 0;                       /* ① 初期非表示 */
+      transition: opacity 1.2s ease;    /* フェードイン演出 */
     }
+    .hero-video-bg.yt-ready { opacity: 1; }
     .hero-video-bg #hero-yt-player {
       position: absolute;
       top: 50%; left: 50%;
@@ -1781,13 +1784,12 @@
         </p>
 
         <div class="reveal rev-d3 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="mailto:info@loyalx.co.jp"
-             class="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold hover:text-navy-deep px-10 py-4 font-sans-en text-[0.72rem] tracking-[0.25em] uppercase transition-all duration-300 group">
+          <a href="/cdn-cgi/l/email-protection#dbb2b5bdb49bb7b4a2bab7a3f5b8b4f5b1ab" class="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold hover:text-navy-deep px-10 py-4 font-sans-en text-[0.72rem] tracking-[0.25em] uppercase transition-all duration-300 group">
             お問い合わせ
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
-        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3">info@loyalx.co.jp</p>
+        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bad3d4dcd5fad6d5c3dbd6c294d9d594d0ca">[email&#160;protected]</a></p>
 
       </div>
     </div>
@@ -1828,9 +1830,8 @@
 
         <div>
           <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Contact</p>
-          <a href="mailto:info@loyalx.co.jp"
-             class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
-            info@loyalx.co.jp
+          <a href="/cdn-cgi/l/email-protection#3d54535b527d5152445c5145135e5213574d" class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
+            <span class="__cf_email__" data-cfemail="771e191118371b180e161b0f591418591d07">[email&#160;protected]</span>
           </a>
           <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
              class="font-sans-en text-navy/50 hover:text-gold text-sm transition-colors block">
@@ -1872,7 +1873,7 @@
   </button>
 
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ─── Header scroll behavior ─── */
     const header    = document.getElementById('header');
     const backToTop = document.getElementById('back-to-top');
@@ -1995,6 +1996,9 @@
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     })();
 
+    var player;
+    var YT_START_SEC = 2;
+
     window.onYouTubeIframeAPIReady = function() {
       player = new YT.Player('hero-yt-player', {
         videoId: 'ttXfo5kKqJk',
@@ -2003,23 +2007,31 @@
           'mute': 1,
           'loop': 1,
           'playlist': 'ttXfo5kKqJk',
+          'start': YT_START_SEC,
           'controls': 0,
           'showinfo': 0,
           'rel': 0,
           'modestbranding': 1,
           'playsinline': 1,
-          'iv_load_policy': 3
+          'iv_load_policy': 3,
+          'disablekb': 1,
+          'fs': 0
         },
         events: {
           'onReady': function(e) {
             e.target.mute();
-            e.target.seekTo(2); // ここで確実に2秒から再生
+            e.target.seekTo(YT_START_SEC, true);
             e.target.playVideo();
           },
           'onStateChange': function(e) {
-            // ループ時に最初に戻るのを防ぎ、2秒から再生させる
+            if (e.data === YT.PlayerState.PLAYING) {
+              var bg = document.getElementById('hero-video-bg');
+              if (bg && !bg.classList.contains('yt-ready')) {
+                bg.classList.add('yt-ready');
+              }
+            }
             if (e.data === YT.PlayerState.ENDED) {
-              e.target.seekTo(2);
+              e.target.seekTo(YT_START_SEC, true);
               e.target.playVideo();
             }
           },
