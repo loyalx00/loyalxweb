@@ -1050,16 +1050,7 @@
   <div class="hero-bg-img" aria-hidden="true"></div>
 
   <div class="hero-video-bg" id="hero-video-bg" aria-hidden="true">
-    <iframe
-      id="hero-yt-player"
-      src="https://www.youtube.com/embed/ttXfo5kKqJk?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=ttXfo5kKqJk&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&origin=https://loyalx.co.jp"
-      title="Loyal Experience hero video"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      loading="eager"
-      tabindex="-1">
-    </iframe>
-  </div>
+    <div id="hero-yt-player"></div> </div>
 
   <div class="hero-dots" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
@@ -1088,7 +1079,7 @@
       <div class="mt-14 reveal rev-d3 pickup-fv">
         <p style="font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(168,146,116,0.55);margin-bottom:0.9rem;">— Pick Up Experience</p>
         <a href="https://www.shikoku-henro.jp/" target="_blank" rel="noopener noreferrer"
-           class="pickup-card group" aria-label="四国遍ho VIP Tour — shikoku-henro.jp">
+           class="pickup-card group" aria-label="四国遍路 VIP Tour — shikoku-henro.jp">
           <div class="pickup-accent-line"></div>
           <div class="pickup-inner">
             <div class="pickup-text-block">
@@ -1114,28 +1105,49 @@
   </div>
 
   <script>
-    (function() {
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    })();
+    // YouTube APIの読み込み
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('hero-yt-player', {
+        videoId: 'ttXfo5kKqJk',
+        playerVars: {
+          'autoplay': 1,
+          'mute': 1,
+          'loop': 1,
+          'playlist': 'ttXfo5kKqJk',
+          'controls': 0,
+          'showinfo': 0,
+          'rel': 0,
+          'modestbranding': 1,
+          'playsinline': 1,
+          'iv_load_policy': 3
+        },
         events: {
-          'onReady': function(event) {
-            event.target.mute();
-            event.target.seekTo(2); // ここで2秒にジャンプ
-            event.target.playVideo();
-          }
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
         }
       });
     }
+
+    function onPlayerReady(event) {
+      event.target.mute(); // 確実に消音
+      event.target.seekTo(2); // 2秒から開始
+      event.target.playVideo(); // 再生開始
+    }
+
+    // もし再生が止まっていたら、再開させるための処理
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.UNSTARTED) {
+        event.target.playVideo();
+      }
+    }
   </script>
 </section>
-
 
   <!-- ════════════════════════════════════════════════
        TICKER / MARQUEE
@@ -1567,14 +1579,15 @@
       <div class="ai-circle-section reveal">
 
         <div class="ai-circle-copy">
+          <p class="ai-circle-eyebrow font-serif-jp text-white font-light leading-snug" style="font-size: clamp(1.4rem, 3vw, 2.4rem);">Customer + AI Agent</p>
           <h3 class="ai-circle-headline">
             AI時代の顧客中心マーケティングを、<br>
             <span class="text-gold">企業・自治体とともに<br>進化させる。</span>
           </h3>
-          <p class="ai-circle-body font-sans-jp text-white/55 text-[0.82rem] mt-4 leading-relaxed max-w-md">
+          <p class="ai-circle-body font-sans-jp text-white/55 text-[0.9rem] mt-4 leading-relaxed max-w-md">
             ツール導入で終わらない。顧客との関係性そのものを再設計する。<br>
-            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで<br>
-            途切れなく回り続けるマーケティングエンジンをともに構築する。
+            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで途切れなく<br>
+            回り続けるマーケティングエンジンをともに構築する。
           </p>
         </div>
 
