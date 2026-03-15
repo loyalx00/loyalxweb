@@ -1997,17 +1997,14 @@
     })();
 
     var player;
-    var YT_START_SEC = 2;
-
     window.onYouTubeIframeAPIReady = function() {
       player = new YT.Player('hero-yt-player', {
-        videoId: 'ttXfo5kKqJk',
+        videoId: 'banmXHHJCQs',
         playerVars: {
           'autoplay': 1,
           'mute': 1,
           'loop': 1,
-          'playlist': 'ttXfo5kKqJk',
-          'start': YT_START_SEC,
+          'playlist': 'banmXHHJCQs',
           'controls': 0,
           'showinfo': 0,
           'rel': 0,
@@ -2020,7 +2017,6 @@
         events: {
           'onReady': function(e) {
             e.target.mute();
-            e.target.seekTo(YT_START_SEC, true);
             e.target.playVideo();
           },
           'onStateChange': function(e) {
@@ -2031,8 +2027,7 @@
               }
             }
             if (e.data === YT.PlayerState.ENDED) {
-              e.target.seekTo(YT_START_SEC, true);
-              e.target.playVideo();
+                e.target.playVideo();
             }
           },
           'onError': function(e) {
