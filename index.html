@@ -57,6 +57,7 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
+      overflow-x: hidden;
       font-family: 'Noto Sans JP', sans-serif;
       overflow-x: hidden;
       background-color: #fdfaf6;
@@ -152,6 +153,25 @@
       .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
       /* 生み出す の後で改行 — mobile only */
       .sp-br { display: block !important; }
+      /* Pickup card mobile: タイトルを縦積み、折り返し防止 */
+      .pickup-title {
+        flex-direction: column !important;
+        gap: 0.3rem !important;
+        align-items: flex-start !important;
+      }
+      .pickup-title-ja {
+        font-size: 1.1rem !important;
+        white-space: nowrap !important;
+      }
+      .pickup-title-en {
+        font-size: 0.58rem !important;
+        letter-spacing: 0.12em !important;
+        white-space: nowrap !important;
+      }
+      /* pickup sub：モバイルで表示（1行に絞る） */
+      .pickup-sub { display: block !important; font-size: 0.68rem !important; }
+      /* pickup card パディング調整 */
+      .pickup-inner { padding: 1rem 1rem 1rem 1.2rem !important; }
       /* Hero body copy: force center + remove max-width cap on mobile */
       .hero-section > .relative > .max-w-3xl p { text-align: center !important; max-width: 100% !important; }
     }
