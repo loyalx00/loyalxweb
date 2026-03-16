@@ -55,10 +55,9 @@
   <style>
     /* ─── Reset & Base ─────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      overflow-x: hidden;
       background-color: #fdfaf6;
       color: #1c1c1c;
       -webkit-font-smoothing: antialiased;
@@ -135,15 +134,12 @@
       .hero-section .gold-line-left { display: none !important; }
       /* hide second body sentence on mobile */
       .hero-copy-sp-hide { display: none !important; }
+      /* hide pickup card label + sub on mobile */
       .pickup-label { display: none !important; }
+      .pickup-sub   { display: none !important; }
+      /* center pickup card on mobile */
       .pickup-fv > p { text-align: center !important; }
-      .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 100% !important; }
-      #scroll-cue { display: none !important; }
-      .pickup-title { flex-direction: column !important; gap: 0.25rem !important; align-items: flex-start !important; }
-      .pickup-title-ja { font-size: 1.2rem !important; white-space: nowrap !important; letter-spacing: 0.08em !important; }
-      .pickup-title-en { font-size: 0.58rem !important; white-space: nowrap !important; }
-      .pickup-sub { display: block !important; font-size: 0.68rem !important; margin-top: 0.4rem !important; }
-      .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
+      .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 340px !important; }
       /* 生み出す の後で改行 — mobile only */
       .sp-br { display: block !important; }
       /* Hero body copy: force center + remove max-width cap on mobile */
@@ -189,7 +185,7 @@
     .hero-video-bg #hero-yt-player {
       position: absolute;
       top: 50%; left: 50%;
-      width: 100%;
+      width: 100vw;
       height: 56.25vw;   /* 16:9 aspect ratio */
       min-height: 100%;
       min-width: 177.78vh; /* 16:9 aspect ratio */
@@ -821,14 +817,6 @@
       gap: 0.6rem;
       letter-spacing: 0.06em;
     }
-    .pickup-title-ja {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: #ffffff;
-      white-space: nowrap;
-      letter-spacing: 0.06em;
-    }
     .pickup-title-en {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.6rem;
@@ -988,6 +976,21 @@
       .fv2-bar  { width: 100% !important; }
       .fv2-tags { font-size: 0.6rem; }
     }
+  
+  /* ── Mobile overflow & pickup fixes ── */
+  @media (max-width: 767px) {
+    html, body { overflow-x: hidden !important; }
+    .pickup-label { display: none !important; }
+    .pickup-fv > p { text-align: center !important; }
+    .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 100% !important; }
+    #scroll-cue { display: none !important; }
+    .pickup-title { flex-direction: column !important; gap: 0.25rem !important; align-items: flex-start !important; }
+    .pickup-title-ja { font-size: 1.2rem !important; white-space: nowrap !important; letter-spacing: 0.08em !important; }
+    .pickup-title-en { font-size: 0.58rem !important; white-space: nowrap !important; }
+    .pickup-sub { display: block !important; font-size: 0.68rem !important; margin-top: 0.4rem !important; }
+    .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
+  }
+
   </style>
 </head>
 
@@ -1078,8 +1081,8 @@
           <div class="pickup-inner">
             <div class="pickup-text-block">
               <span class="pickup-label">Shikoku Henro — VIP Journey</span>
-              <span class="pickup-title"><span class="pickup-title-ja">四国遍路</span><span class="pickup-title-en">1,200-Year Sacred Circuit</span></span>
-              <span class="pickup-sub">1日1組限定のプライベートな巡礼の旅</span>
+              <span class="pickup-title">四国遍路<span class="pickup-title-en">1,200-year sacred circuit</span></span>
+              <span class="pickup-sub">インバウンド富裕層向けプライベート巡礼体験</span>
             </div>
             <div class="pickup-arrow-wrap">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="pickup-arrow">
@@ -1093,7 +1096,7 @@
     </div>
   </div>
 
-  <div id="scroll-cue" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
     <span class="font-sans-en text-[0.6rem] tracking-[0.3em] text-white/25">SCROLL</span>
     <div class="scroll-indicator w-px h-10 bg-gradient-to-b from-gold/50 to-transparent"></div>
   </div>
@@ -1502,7 +1505,7 @@
           </h3>
           <p class="ai-circle-body font-sans-jp text-white/55 text-[0.82rem] mt-4 leading-relaxed max-w-md">
             ツール導入で終わらない。顧客との関係性そのものを再設計する。<br>
-            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで<br class="hidden sm:block">
+            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで<br>
             途切れなく回り続けるマーケティングエンジンをともに構築する。
           </p>
         </div>
@@ -1802,7 +1805,6 @@
           </a>
         </div>
 
-
       </div>
     </div>
   </section>
@@ -1843,7 +1845,7 @@
         <div>
           <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Contact</p>
           <a href="mailto:info@loyalx.co.jp" class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
-            info@loyalx.co.jp
+            <span class="__cf_email__">[email&#160;protected]</span>
           </a>
           <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
              class="font-sans-en text-navy/50 hover:text-gold text-sm transition-colors block">
@@ -1885,7 +1887,7 @@
   </button>
 
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ─── Header scroll behavior ─── */
     const header    = document.getElementById('header');
     const backToTop = document.getElementById('back-to-top');
