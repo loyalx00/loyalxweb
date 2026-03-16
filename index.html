@@ -144,8 +144,6 @@
       .pickup-title-en { font-size: 0.58rem !important; white-space: nowrap !important; }
       .pickup-sub { display: block !important; font-size: 0.68rem !important; margin-top: 0.4rem !important; }
       .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
-      /* CONTACTの見出しをモバイルで収める */
-      #contact h2 { font-size: 1.42rem !important; line-height: 1.5 !important; }
       /* 生み出す の後で改行 — mobile only */
       .sp-br { display: block !important; }
       /* Hero body copy: force center + remove max-width cap on mobile */
@@ -1787,7 +1785,7 @@
         <span class="section-label reveal mb-6" data-i18n="contact-label">Contact</span>
         <h2 class="font-serif-jp text-white font-light leading-[1.35] mb-6 reveal rev-d1"
             style="font-size: clamp(1.9rem, 4vw, 3.2rem);">
-          <span data-i18n="contact-h2">今ある「ものづくり」を活かして<span class="text-gold">新しい「価値」を創る。</span></span>
+          <span data-i18n="contact-h2">今ある「ものづくり」を<br class="sm:hidden">活かして<span class="text-gold"><br class="sm:hidden">新しい「価値」を創る。</span></span>
         </h2>
 
         <div class="gold-line max-w-xs mx-auto mb-8 reveal rev-d1"></div>
@@ -1803,7 +1801,7 @@
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
-        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3">info@loyalx.co.jp</p>
+
 
       </div>
     </div>
