@@ -57,8 +57,8 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
-      overflow-x: hidden;
       font-family: 'Noto Sans JP', sans-serif;
+      overflow-x: hidden;
       background-color: #fdfaf6;
       color: #1c1c1c;
       -webkit-font-smoothing: antialiased;
@@ -135,34 +135,17 @@
       .hero-section .gold-line-left { display: none !important; }
       /* hide second body sentence on mobile */
       .hero-copy-sp-hide { display: none !important; }
-      /* hide pickup card label + sub on mobile */
       .pickup-label { display: none !important; }
-      /* center pickup card on mobile */
       .pickup-fv > p { text-align: center !important; }
       .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 100% !important; }
-      /* SCROLLインジケーターはモバイルで非表示 */
-      .scroll-indicator-wrap { display: none !important; }
+      #scroll-cue { display: none !important; }
+      .pickup-title { flex-direction: column !important; gap: 0.25rem !important; align-items: flex-start !important; }
+      .pickup-title-ja { font-size: 1.2rem !important; white-space: nowrap !important; letter-spacing: 0.08em !important; }
+      .pickup-title-en { font-size: 0.58rem !important; white-space: nowrap !important; }
+      .pickup-sub { display: block !important; font-size: 0.68rem !important; margin-top: 0.4rem !important; }
+      .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
       /* 生み出す の後で改行 — mobile only */
       .sp-br { display: block !important; }
-      /* Pickup card mobile: タイトルを縦積み、折り返し防止 */
-      .pickup-title {
-        flex-direction: column !important;
-        gap: 0.3rem !important;
-        align-items: flex-start !important;
-      }
-      .pickup-title-ja {
-        font-size: 1.1rem !important;
-        white-space: nowrap !important;
-      }
-      .pickup-title-en {
-        font-size: 0.58rem !important;
-        letter-spacing: 0.12em !important;
-        white-space: nowrap !important;
-      }
-      /* pickup sub：モバイルで表示（1行に絞る） */
-      .pickup-sub { display: block !important; font-size: 0.68rem !important; }
-      /* pickup card パディング調整 */
-      .pickup-inner { padding: 1rem 1rem 1rem 1.2rem !important; }
       /* Hero body copy: force center + remove max-width cap on mobile */
       .hero-section > .relative > .max-w-3xl p { text-align: center !important; max-width: 100% !important; }
     }
@@ -843,8 +826,8 @@
       font-size: 1.05rem;
       font-weight: 400;
       color: #ffffff;
-      letter-spacing: 0.06em;
       white-space: nowrap;
+      letter-spacing: 0.06em;
     }
     .pickup-title-en {
       font-family: 'Montserrat', sans-serif;
@@ -1110,7 +1093,7 @@
     </div>
   </div>
 
-  <div class="scroll-indicator-wrap absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+  <div id="scroll-cue" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
     <span class="font-sans-en text-[0.6rem] tracking-[0.3em] text-white/25">SCROLL</span>
     <div class="scroll-indicator w-px h-10 bg-gradient-to-b from-gold/50 to-transparent"></div>
   </div>
@@ -1519,7 +1502,7 @@
           </h3>
           <p class="ai-circle-body font-sans-jp text-white/55 text-[0.82rem] mt-4 leading-relaxed max-w-md">
             ツール導入で終わらない。顧客との関係性そのものを再設計する。<br>
-            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで<br>
+            AIエージェントが全チャネルを横断し、Discovery から Loyalty まで<br class="hidden sm:block">
             途切れなく回り続けるマーケティングエンジンをともに構築する。
           </p>
         </div>
