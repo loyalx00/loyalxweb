@@ -55,9 +55,10 @@
   <style>
     /* ─── Reset & Base ─────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'Noto Sans JP', sans-serif;
+      overflow-x: hidden;
       background-color: #fdfaf6;
       color: #1c1c1c;
       -webkit-font-smoothing: antialiased;
@@ -134,12 +135,21 @@
       .hero-section .gold-line-left { display: none !important; }
       /* hide second body sentence on mobile */
       .hero-copy-sp-hide { display: none !important; }
-      /* hide pickup card label + sub on mobile */
+      /* pickup card: label非表示, subは表示 */
       .pickup-label { display: none !important; }
-      .pickup-sub   { display: none !important; }
       /* center pickup card on mobile */
       .pickup-fv > p { text-align: center !important; }
-      .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 340px !important; }
+      .pickup-fv .pickup-card { margin: 0 auto !important; max-width: 100% !important; }
+      /* SCROLL非表示 */
+      #scroll-cue { display: none !important; }
+      /* pickup-title: 縦積みで折り返し防止 */
+      .pickup-title { flex-direction: column !important; gap: 0.25rem !important; align-items: flex-start !important; }
+      .pickup-title-ja { font-size: 1.2rem !important; white-space: nowrap !important; letter-spacing: 0.08em !important; }
+      .pickup-title-en { font-size: 0.58rem !important; white-space: nowrap !important; }
+      /* pickup-sub: モバイルで表示 */
+      .pickup-sub { display: block !important; font-size: 0.68rem !important; margin-top: 0.4rem !important; }
+      /* pickup-inner パディング調整 */
+      .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
       /* 生み出す の後で改行 — mobile only */
       .sp-br { display: block !important; }
       /* Hero body copy: force center + remove max-width cap on mobile */
@@ -185,7 +195,7 @@
     .hero-video-bg #hero-yt-player {
       position: absolute;
       top: 50%; left: 50%;
-      width: 100vw;
+      width: 100%;
       height: 56.25vw;   /* 16:9 aspect ratio */
       min-height: 100%;
       min-width: 177.78vh; /* 16:9 aspect ratio */
@@ -817,6 +827,14 @@
       gap: 0.6rem;
       letter-spacing: 0.06em;
     }
+    .pickup-title-ja {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #ffffff;
+      white-space: nowrap;
+      letter-spacing: 0.06em;
+    }
     .pickup-title-en {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.6rem;
@@ -1066,8 +1084,8 @@
           <div class="pickup-inner">
             <div class="pickup-text-block">
               <span class="pickup-label">Shikoku Henro — VIP Journey</span>
-              <span class="pickup-title">四国遍路<span class="pickup-title-en">1,200-year sacred circuit</span></span>
-              <span class="pickup-sub">インバウンド富裕層向けプライベート巡礼体験</span>
+              <span class="pickup-title"><span class="pickup-title-ja">四国遍路</span><span class="pickup-title-en">1,200-Year Sacred Circuit</span></span>
+              <span class="pickup-sub">1日1組限定のプライベートな巡礼の旅</span>
             </div>
             <div class="pickup-arrow-wrap">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="pickup-arrow">
@@ -1081,7 +1099,7 @@
     </div>
   </div>
 
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+  <div id="scroll-cue" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
     <span class="font-sans-en text-[0.6rem] tracking-[0.3em] text-white/25">SCROLL</span>
     <div class="scroll-indicator w-px h-10 bg-gradient-to-b from-gold/50 to-transparent"></div>
   </div>
@@ -1784,12 +1802,12 @@
         </p>
 
         <div class="reveal rev-d3 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/cdn-cgi/l/email-protection#dbb2b5bdb49bb7b4a2bab7a3f5b8b4f5b1ab" class="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold hover:text-navy-deep px-10 py-4 font-sans-en text-[0.72rem] tracking-[0.25em] uppercase transition-all duration-300 group">
+          <a href="mailto:info@loyalx.co.jp" class="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold hover:text-navy-deep px-10 py-4 font-sans-en text-[0.72rem] tracking-[0.25em] uppercase transition-all duration-300 group">
             お問い合わせ
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
-        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bad3d4dcd5fad6d5c3dbd6c294d9d594d0ca">[email&#160;protected]</a></p>
+        <p class="mt-5 font-sans-en text-white/25 text-sm reveal rev-d3">info@loyalx.co.jp</p>
 
       </div>
     </div>
@@ -1811,8 +1829,9 @@
             </span>
           </a>
           <p class="font-sans-jp font-light text-navy/50 text-xs leading-relaxed" data-i18n="footer-tagline">
-            「ものづくり」の価値を上げる「かちづくり」の会社。<br>
-            マーケティングとデータの力で、日本の価値を世界へ。
+            かちづくりカンパニー。<br>
+            マーケティングと体験で<br>
+            日本の価値を世界へ。
           </p>
         </div>
 
@@ -1820,7 +1839,7 @@
           <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Navigation</p>
           <ul class="space-y-3">
             <li><a href="#about"      class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">About Us</a></li>
-            <li><a href="#business02" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-inbound">インバウンド富裕層旅行事業</a></li>
+            <li><a href="#business02" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-inbound">インバウンド富裕層体験事業</a></li>
             <li><a href="#business01" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-mkt">マーケティング・DX支援</a></li>
             <li><a href="#company"    class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-co">会社概要・プロフィール</a></li>
             <li><a href="#contact"    class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors" data-i18n="footer-contact">お問い合わせ</a></li>
@@ -1829,10 +1848,13 @@
 
         <div>
           <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Contact</p>
-          <a href="/cdn-cgi/l/email-protection#3d54535b527d5152445c5145135e5213574d" class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
-            <span class="__cf_email__" data-cfemail="771e191118371b180e161b0f591418591d07">E-mail</span>
+          <a href="mailto:info@loyalx.co.jp" class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
+            info@loyalx.co.jp
           </a>
-        
+          <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
+             class="font-sans-en text-navy/50 hover:text-gold text-sm transition-colors block">
+            https://loyalx.co.jp
+          </a>
           <div class="mt-8">
             <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-3">Group Company</p>
             <p class="font-sans-jp font-light text-navy/50 text-xs leading-relaxed">
@@ -1869,7 +1891,7 @@
   </button>
 
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     /* ─── Header scroll behavior ─── */
     const header    = document.getElementById('header');
     const backToTop = document.getElementById('back-to-top');
