@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
 <head>
+  <!-- YouTube preconnect for faster load -->
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -991,6 +997,22 @@
     .pickup-inner { padding: 1rem 0.9rem 1rem 1.1rem !important; gap: 0.8rem !important; }
   }
 
+  
+    /* ── YouTube poster (thumbnail shown while video loads) ── */
+    .hero-video-poster {
+      position: absolute; inset: 0;
+      background-image: url('https://img.youtube.com/vi/banmXHHJCQs/maxresdefault.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 1.4s ease;
+      pointer-events: none;
+    }
+    .hero-video-bg.yt-ready .hero-video-poster {
+      opacity: 0;
+    }
+
   </style>
 </head>
 
@@ -1047,7 +1069,9 @@
   <div class="hero-bg-img" aria-hidden="true"></div>
 
   <div class="hero-video-bg" id="hero-video-bg" aria-hidden="true">
-    <div id="hero-yt-player"></div> </div>
+    <div class="hero-video-poster" id="hero-poster" aria-hidden="true"></div>
+    <div id="hero-yt-player"></div>
+  </div>
 
   <div class="hero-dots" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
@@ -2031,6 +2055,7 @@
         events: {
           'onReady': function(e) {
             e.target.mute();
+            e.target.setPlaybackQuality('hd1080');
             e.target.playVideo();
           },
           'onStateChange': function(e) {
