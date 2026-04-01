@@ -1011,6 +1011,8 @@
     }
     .hero-video-bg.yt-ready .hero-video-poster {
       opacity: 0;
+      transition: opacity 0s;
+      pointer-events: none;
     }
 
   </style>
@@ -1902,8 +1904,323 @@
     </div>
   </footer>
 
+  <!-- ═══ Tour Modals ═══ -->
+
   <div id="modal-henro" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="四国遍路VIPツアー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/henro.jpg" alt="四国遍路VIPツアー">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Shikoku Henro</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">四国遍路 VIPツアー</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('henro')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">1,200年の歴史を持つ四国八十八ヶ所霊場を、SBNR層の感性に響く特別プログラムでご案内。歩き遍路×高級宿坊体験を組み合わせた唯一無二のスピリチュアルジャーニーです。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">歩き遍路体験</p><p class="modal-point-desc">四国の自然の中を歩き、1,200年続く巡礼の道を体感。スマートフォンを手放し、足の裏で大地を感じる時間。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">高級宿坊・寺院宿泊</p><p class="modal-point-desc">厳選された宿坊に宿泊し、早朝の勤行・護摩行・瞑想など普段は体験できない寺院文化に触れます。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">伝統文化体験</p><p class="modal-point-desc">手漉き和紙・藍染め・書道・滝行など、四国ならではの文化体験をプライベートでアレンジ。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">04</span><div><p class="modal-point-title">精進料理と地元食材</p><p class="modal-point-desc">地元の旬の食材を使った精進料理や郷土料理を堪能。食を通じて四国の風土を味わいます。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">高知・徳島・香川・愛媛（四国全域）</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Details</span>
+        <p class="modal-other-text">日数・ルート・体験内容はすべてカスタマイズ可能。2泊3日〜8泊9日まで、お客様のご希望に合わせてオーダーメイドでプランニングいたします。英語・フランス語・スペイン語・中国語のネイティブレベル通訳が同行。最大4名様のプライベートツアー。</p>
+        <div class="modal-divider"></div>
+        <div class="modal-link-row" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://www.shikoku-henro.jp/" target="_blank" rel="noopener noreferrer" class="modal-ext-link">shikoku-henro.jp →</a>
+        </div>
+        <button class="modal-inq-btn" onclick="closeTourModal('henro');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
     </div>
+  </div>
+
+  <div id="modal-setouchi" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="瀬戸内ガストロノミークルーズ詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/setouchi.jpg" alt="瀬戸内ガストロノミークルーズ">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Setouchi Gastronomy</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">瀬戸内ガストロノミークルーズ</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('setouchi')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">直島・尾道・犬島を舞台に、現代アートと瀬戸内の食文化を船上で体験。富裕層インバウンド向けのプレミアム体験型クルーズです。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">プライベートクルーズ</p><p class="modal-point-desc">瀬戸内海の穏やかな海をチャーター船で巡り、島々の絶景を船上から満喫。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">ガストロノミー体験</p><p class="modal-point-desc">瀬戸内の新鮮な魚介・柑橘・オリーブなど地元食材を活かした特別コース料理を船上やレストランで。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">アート巡り</p><p class="modal-point-desc">直島・犬島の現代アート施設をプライベートガイド付きで鑑賞。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">直島・尾道・犬島エリア / 瀬戸内海</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('setouchi');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-naoshima" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="直島・豊島アートトリップ詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/naoshima.jpg" alt="直島・豊島アートトリップ">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Naoshima &amp; Teshima Art Journey</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">直島・豊島 アートトリップ</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('naoshima')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">世界に類のない「島とアートの共生」。地中美術館・豊島美術館など現代アートの聖地を、プライベートで巡る瀬戸内プレミアムジャーニー。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">地中美術館 プライベート鑑賞</p><p class="modal-point-desc">安藤忠雄設計の地中美術館で、モネ・タレル・デ・マリアの作品をゆったりと鑑賞。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">豊島美術館</p><p class="modal-point-desc">内藤礼×西沢立衛による唯一無二の空間で、水と光のアートを体感。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">島の暮らしと食文化</p><p class="modal-point-desc">島の地元食材を使った特別ディナーと、アーティストとの交流機会。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">直島・豊島・小豆島 / 瀬戸内海</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('naoshima');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-washoku" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="ムスリム向けCulinary Tour「和食旅」詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/washoku.jpg" alt="ムスリム向けCulinary Tour「和食旅」">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Washoku-Tabi / Muslim Culinary Tour</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">ムスリム向けCulinary Tour「和食旅」</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('washoku')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">日本の食文化を体験型旅行で学ぶ12日間の本格Culinaryツアー。ハラル対応・通訳同行。市場・生産現場・加工工場を巡り、食材から調理器具・作法まで五感で体験します。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">ハラル対応の日本食体験</p><p class="modal-point-desc">ハラル認証済みの厳選レストラン・料亭で、本格的な和食のフルコースを堪能。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">市場・生産現場見学</p><p class="modal-point-desc">築地・豊洲市場や各地の漁港・農園・酒蔵など、日本の食を支える現場をプライベートで訪問。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">調理体験・作法</p><p class="modal-point-desc">和食の調理体験、包丁研ぎ、懐石の作法など、食文化の深層を体験。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">全国（複数地域）</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('washoku');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-hagi" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【山口】伝統工芸とマインドフルネスの旅詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/hagi.jpg" alt="【山口】伝統工芸とマインドフルネスの旅">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Hagi-Nagato / Crafts &amp; Mindfulness</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【山口】伝統工芸とマインドフルネスの旅</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('hagi')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">萩焼の工房へプライベート招待、名工の解説付きで作品鑑賞・購入体験。神仏習合の秘湯「恩湯」早朝貸切、元乃隅神社参拝など精神性豊かな2泊3日の旅。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">萩焼工房プライベート訪問</p><p class="modal-point-desc">人間国宝級の名工の工房を訪問し、萩焼の制作過程を間近で鑑賞。特別な作品のオーダーも可能。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">秘湯「恩湯」早朝貸切</p><p class="modal-point-desc">神仏習合の歴史を持つ長門湯本温泉「恩湯」を早朝に貸切。心身を清める特別な時間。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">元乃隅神社参拝</p><p class="modal-point-desc">日本海を望む123基の鳥居が連なる絶景スポットで、自然と信仰の融合を体感。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">山口県・萩長門エリア（2泊3日）</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('hagi');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-whisky" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【富山】三郎丸ウイスキーVIPツアー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/whisky.jpg" alt="【富山】三郎丸ウイスキーVIPツアー">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">"Sanroku Club" Whisky VIP Tour</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【富山】三郎丸ウイスキーVIPツアー</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('whisky')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">幻の三郎丸原酒を試飲し「百年倶楽部」限定カスクから1本をボトリング。T&amp;T TOYAMAへ特別招待後、デスティネーションレストラン「LEVO」でガストロノミーディナー。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">三郎丸蒸留所VIP見学</p><p class="modal-point-desc">北陸唯一のウイスキー蒸留所で、通常非公開エリアを含む特別ツアー。限定原酒のテイスティング。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">百年倶楽部カスクボトリング</p><p class="modal-point-desc">「百年倶楽部」限定カスクから、世界に1本だけのオリジナルボトルをその場でボトリング。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">T&amp;T TOYAMA &amp; レストランLEVO</p><p class="modal-point-desc">富山の文化発信拠点T&amp;T TOYAMAへ特別招待。デスティネーションレストラン「LEVO」で富山の食材を活かしたガストロノミーディナー。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">富山県・砺波エリア</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('whisky');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ninnaji" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】仁和寺 非公開エリア宿泊プラン詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/ninnaji.jpg" alt="【京都】仁和寺 非公開エリア宿泊プラン">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Ninnaji / Kyoto Imperial Temple</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【京都】仁和寺 非公開エリア宿泊プラン</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('ninnaji')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">皇室ゆかりの世界遺産・仁和寺へプライベート招待。通常非公開の御堂・寺宝を僧侶と拝観。閉門後の御殿でお食事・雅楽鑑賞・御室流生け花体験も可能。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">非公開エリア特別拝観</p><p class="modal-point-desc">通常は立入禁止の御堂や寺宝収蔵庫を、僧侶の解説付きでプライベート拝観。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">閉門後の御殿ディナー</p><p class="modal-point-desc">観光客のいない閉門後の御殿で、京料理の特別コースをいただきます。雅楽の生演奏付き。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">御室流生け花体験</p><p class="modal-point-desc">仁和寺発祥の御室流華道を、御室流の師範から直接指導を受けて体験。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">京都府・御室エリア</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('ninnaji');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-chishakuin" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】智積院 静寂と伝統の宿泊体験詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/chishakuin.jpg" alt="【京都】智積院 静寂と伝統の宿泊体験">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Chishakuin / Zen Retreat Kyoto</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【京都】智積院 静寂と伝統の宿泊体験</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('chishakuin')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">国宝庭園・長谷川等伯の襖絵を独占鑑賞。阿字観（瞑想）・写経・坐禅・朝の勤行体験を通じ心身を深く整える1泊2日。智積院会館に宿泊。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">国宝・長谷川等伯 障壁画 独占鑑賞</p><p class="modal-point-desc">桃山時代の傑作、長谷川等伯・久蔵父子による障壁画を閉館後にプライベートで鑑賞。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">阿字観・写経・坐禅体験</p><p class="modal-point-desc">真言宗の瞑想法「阿字観」をはじめ、写経・坐禅を僧侶の指導のもとで体験。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">朝の勤行参加</p><p class="modal-point-desc">早朝の勤行に参加し、僧侶とともに読経。日常から離れた清浄な時間を過ごします。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">京都府・東山エリア（1泊2日）</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('chishakuin');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-nishihonganji" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【京都】西本願寺 非公開エリアへご招待詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/nishihonganji.jpg" alt="【京都】西本願寺 非公開エリアへご招待">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Nishi Honganji / UNESCO Heritage</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【京都】西本願寺 非公開エリアへご招待</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('nishihonganji')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">世界遺産・西本願寺の非公開エリア「鴻の間」と名勝「虎渓の庭」に特別招待。プライベート参拝後、茶席でのおもてなし。着物着付け体験・記念撮影も可能。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">非公開「鴻の間」特別招待</p><p class="modal-point-desc">通常非公開の書院「鴻の間」に特別招待。桃山時代の華麗な障壁画と欄間彫刻を間近で鑑賞。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">名勝「虎渓の庭」</p><p class="modal-point-desc">国の名勝に指定された枯山水庭園「虎渓の庭」をプライベートで拝観。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">茶席・着物体験</p><p class="modal-point-desc">境内の茶室にて本格的なお点前を体験。ご希望の方には着物着付けと記念撮影をアレンジ。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">京都府・堀川エリア</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('nishihonganji');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-nishiya" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【滋賀】永治屋清左衛門 着物プライベートオーダー詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/nishiya.jpg" alt="【滋賀】永治屋清左衛門 着物プライベートオーダー">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Nishiya Seizaemon / 230-Year Kimono</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【滋賀】永治屋清左衛門 着物プライベートオーダー</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('nishiya')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">創業230年の老舗工房で世界に一点だけの着物・帯をプライベートオーダー。古代染織品や工芸文化財を鑑賞しながら、染織文化財復元の技を五感で体感。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">工房プライベート見学</p><p class="modal-point-desc">230年の歴史を持つ工房で、熟練の職人による染織の技術を間近で見学。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">オーダーメイド着物・帯</p><p class="modal-point-desc">生地・柄・色を選び、世界に一点だけのオリジナル着物または帯をオーダー。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">文化財鑑賞</p><p class="modal-point-desc">通常非公開の古代染織品コレクションや、復元された工芸文化財を特別に鑑賞。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">滋賀県・米原エリア</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('nishiya');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-sakai" class="tour-modal-overlay" role="dialog" aria-modal="true" aria-label="【大阪】堺打刃物 鍛錬・研ぎ体験詳細">
+    <div class="tour-modal-box">
+      <div class="tour-modal-hero">
+        <img src="images/sakai.jpg" alt="【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー">
+        <div class="tour-modal-hero-overlay">
+          <div>
+            <span class="section-label text-gold-lt mb-1">Sakai Knife / Forging Experience</span>
+            <h2 class="font-serif-jp text-white text-2xl font-light">【大阪】堺打刃物 鍛錬・研ぎ体験 ＆ プライベートオーダー</h2>
+          </div>
+        </div>
+        <button class="tour-modal-close" onclick="closeTourModal('sakai')" aria-label="閉じる">✕</button>
+      </div>
+      <div class="tour-modal-body">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-other-text">世界のシェフが愛用する堺打刃物の鍛錬・研ぎを体験し、鋼の種類・形状を選んで世界に1本のオリジナル包丁をプライベートオーダー。</p>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Highlights</span>
+        <div class="modal-point"><span class="modal-point-num">01</span><div><p class="modal-point-title">鍛冶工房で鍛錬体験</p><p class="modal-point-desc">堺の鍛冶職人の工房で、実際に鋼を叩いて包丁の形を作る鍛錬工程を体験。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">02</span><div><p class="modal-point-title">研ぎ師による研ぎ体験</p><p class="modal-point-desc">堺打刃物の命とも言える「研ぎ」の技術を、研ぎ師から直接学びます。</p></div></div>
+        <div class="modal-point"><span class="modal-point-num">03</span><div><p class="modal-point-title">オリジナル包丁オーダー</p><p class="modal-point-desc">鋼の種類・刃の形状・柄の素材を選び、世界に1本だけのオリジナル包丁をオーダーメイド。</p></div></div>
+        <div class="modal-divider"></div>
+        <span class="modal-section-title">Area</span>
+        <p class="modal-other-text">大阪府・堺エリア</p>
+        <button class="modal-inq-btn" onclick="closeTourModal('sakai');document.getElementById('contact').scrollIntoView({behavior:'smooth'});">お問い合わせ</button>
+      </div>
+    </div>
+  </div>
   <button id="back-to-top" aria-label="ページトップへ戻る">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M8 12V4M4 8l4-4 4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2023,7 +2340,23 @@
       el.classList.remove('open');
       document.body.style.overflow = '';
     }
-    // ...その他のモーダル・フォーム制御も全て維持
+    // overlay click-to-close & ESC key for tour modals
+    document.querySelectorAll('.tour-modal-overlay').forEach(function(overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.tour-modal-overlay.open').forEach(function(m) {
+          m.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+    });
   </script>
 
   <script>
