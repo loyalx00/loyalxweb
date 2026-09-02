@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瀬戸内ガストロノミークルーズ｜直島・豊島・犬島をカタマランヨットで巡り、島のアートと船上ガストロノミーを堪能する2泊3日のプレミアム体験。">
+  <meta name="keywords" content="瀬戸内ガストロノミークルーズ,直島,豊島,犬島,カタマランヨット,ベネッセハウス,インバウンド富裕層,ロイヤルエクスペリエンス">
+  <meta property="og:title" content="瀬戸内ガストロノミークルーズ｜Setouchi Gastronomy Cruise">
+  <meta property="og:description" content="瀬戸内の島々（直島・豊島・犬島）をカタマランヨットで巡る、2泊3日のプライベート・アート＆ガストロノミー体験。">
+  <meta property="og:url" content="https://loyalx.co.jp/setouchi-cruise.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://loyalx.co.jp/images/setouchi-cruise/01-hero.jpg">
+  <title>瀬戸内ガストロノミークルーズ｜ロイヤルエクスペリエンス</title>
+  <link rel="icon" type="image/png" href="images/LX_logo.png">
+  <link rel="shortcut icon" href="images/LX_logo.png">
+  <link rel="canonical" href="https://loyalx.co.jp/setouchi-cruise.html">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5ZC95HBQ');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-deep': '#2A2F3A',
+            'navy':      '#2F3645',
+            'navy-mid':  '#3A4255',
+            'gold':      '#A89274',
+            'gold-lt':   '#C0AA8C',
+            'cream':     '#F4F0EA',
+            'warm-wh':   '#fdfaf7',
+            'greige':    '#E8DFD1',
+            'greige-lt': '#F0E8DA',
+            'sage':      '#6B7E70',
+          },
+          fontFamily: {
+            'serif-en': ['"Cormorant Garamond"', 'serif'],
+            'serif-jp': ['"Noto Serif JP"', 'serif'],
+            'sans-jp':  ['"Noto Sans JP"', 'sans-serif'],
+            'sans-en':  ['Montserrat', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fdfaf6;
+      color: #1c1c1c;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #2A2F3A; }
+    ::-webkit-scrollbar-thumb { background: #A89274; border-radius: 2px; }
+
+    /* ── Header ── */
+    #header {
+      transition: background 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+    #header.scrolled {
+      background: rgba(42,47,58,0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 rgba(168,146,116,0.22);
+      border-bottom-color: rgba(168,146,116,0.15);
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: #A89274;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── Mobile Menu ── */
+    #mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(42,47,58,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 998;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.25rem;
+    }
+    #mobile-menu.open { display: flex; }
+
+    /* ── Section labels & gold accents ── */
+    .section-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #A89274;
+    }
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168,146,116,0.6), transparent);
+    }
+    .gold-line-left {
+      display: inline-block;
+      width: 48px; height: 1px;
+      background: #A89274;
+    }
+
+    /* ── Hero — wide landscape image only. No overlays on the photo. ── */
+    /* Slim band above hero: back link on the left, sits below the fixed header */
+    .hero-topbar {
+      padding: calc(88px + 1.1rem) 1.5rem 0.85rem;
+      background: #fdfaf7;
+    }
+    @media (min-width: 768px) { .hero-topbar { padding-left: 3rem; padding-right: 3rem; } }
+    .hero-topbar .back-to-home {
+      color: rgba(47,54,69,0.55);
+      text-shadow: none;
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      margin-bottom: 0;
+    }
+    .hero-topbar .back-to-home:hover { color: #A89274; }
+
+    .cruise-hero {
+      position: relative;
+      height: clamp(340px, 46vh, 520px);
+      overflow: hidden;
+    }
+    .cruise-hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/setouchi-cruise/hero-wide.jpg') center center / cover no-repeat;
+      z-index: 0;
+    }
+
+    /* Slim band below hero: reservation CTA, centered */
+    .hero-ctabar {
+      padding: 1.5rem 1.5rem 2rem;
+      background: #fdfaf7;
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 767px) {
+      .cruise-hero { height: clamp(280px, 42vh, 380px); }
+      /* Shift crop on mobile so the couple stays centered */
+      .cruise-hero-bg { background-position: 55% center; }
+      .hero-ctabar { padding: 1.25rem 1rem 1.75rem; }
+      .hero-ctabar .cta-hero-btn { width: 100%; justify-content: center; }
+    }
+
+    /* ── Reveal on scroll ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .rev-d1 { transition-delay: 0.10s; }
+    .rev-d2 { transition-delay: 0.20s; }
+    .rev-d3 { transition-delay: 0.30s; }
+
+    /* ── Highlights (3 pillars) ── */
+    .pillar-card {
+      background: #fff;
+      border: 1px solid rgba(168,146,116,0.15);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168,146,116,0.4);
+      box-shadow: 0 24px 60px rgba(168,146,116,0.08);
+    }
+    .pillar-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #2A2F3A;
+    }
+    .pillar-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .pillar-card:hover .pillar-img img { transform: scale(1.05); }
+    .pillar-body { padding: 1.75rem 1.75rem 2rem; }
+
+    /* ── Itinerary days ── */
+    .day-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      background: #fff;
+      border: 1px solid rgba(168,146,116,0.18);
+      overflow: hidden;
+    }
+    .day-card.reverse .day-image { order: 2; }
+    .day-image {
+      position: relative;
+      min-height: 340px;
+      background-size: cover;
+      background-position: center;
+    }
+    .day-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(20,30,50,0.05), rgba(20,30,50,0.15));
+    }
+    .day-body {
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .day-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #A89274;
+      margin-bottom: 0.75rem;
+    }
+    .day-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: #A89274;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .day-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: #2F3645;
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+    .day-schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .day-item {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.9rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: #444;
+      line-height: 1.7;
+      border-bottom: 1px solid rgba(168,146,116,0.12);
+      padding-bottom: 0.75rem;
+    }
+    .day-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .day-time {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #A89274;
+      font-weight: 500;
+      padding-top: 0.15rem;
+    }
+    @media (max-width: 767px) {
+      .day-card, .day-card.reverse { grid-template-columns: 1fr; }
+      .day-card.reverse .day-image { order: 0; }
+      .day-image { min-height: 240px; }
+      .day-body { padding: 2rem 1.5rem; }
+    }
+
+    /* ── Terms & Info ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      background: rgba(168,146,116,0.15);
+    }
+    @media (max-width: 767px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-cell {
+      background: #fff;
+      padding: 1.5rem 1.75rem;
+    }
+    .info-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #A89274;
+      margin-bottom: 0.55rem;
+    }
+    .info-value {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #2F3645;
+      line-height: 1.7;
+    }
+
+    /* ── Included / Not Included ── */
+    .incl-block {
+      background: #fff;
+      padding: 2rem 2.25rem;
+      border: 1px solid rgba(168,146,116,0.15);
+    }
+    .incl-list { list-style: none; padding: 0; margin: 0; }
+    .incl-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: #444;
+      line-height: 1.7;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(168,146,116,0.1);
+    }
+    .incl-list li:last-child { border-bottom: none; }
+    .incl-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #A89274;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+    .incl-list.excluded li::before { background: #ccc; }
+
+    /* ── Guest voices ── */
+    .guests-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .guest-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .guest-flag {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    /* ── CTA ── */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.05rem 2.5rem;
+      border: 1px solid #A89274;
+      color: #A89274;
+      background: transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+      text-decoration: none;
+    }
+    .cta-btn:hover {
+      background: #A89274;
+      color: #fff;
+    }
+    .cta-btn-secondary {
+      color: #2F3645;
+      border-color: rgba(47,54,69,0.3);
+    }
+    .cta-btn-secondary:hover {
+      background: #2F3645;
+      color: #fff;
+      border-color: #2F3645;
+    }
+
+    /* ── Back-to-top ── */
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 44px; height: 44px;
+      background: #A89274;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 100;
+    }
+    #back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+    /* ── Floating persistent CTA (bottom-left, always visible after hero) ── */
+    #floating-cta {
+      position: fixed;
+      bottom: 1.75rem;
+      left: 1.75rem;
+      z-index: 100;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.9rem 1.5rem;
+      background: #2F3645;
+      color: #fff;
+      border: 1px solid #A89274;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 12px 32px rgba(20,30,50,0.28);
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s, color 0.3s;
+    }
+    #floating-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #floating-cta:hover {
+      background: #A89274;
+    }
+    #floating-cta .cta-icon {
+      width: 14px; height: 14px;
+    }
+    @media (max-width: 767px) {
+      #floating-cta {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        justify-content: center;
+        padding: 0.9rem 1rem;
+        font-size: 0.64rem;
+      }
+      #back-to-top { bottom: 5.25rem; right: 1rem; }
+    }
+
+    /* ── Breadcrumb-style back link in hero ── */
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      transition: color 0.3s;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 1px 12px rgba(20,30,50,0.55);
+    }
+    .back-to-home:hover { color: #fff; }
+    .back-to-home::before {
+      content: '←';
+      font-size: 0.9rem;
+    }
+
+    /* Reservation button sitting on bright hero — soft backdrop for readability without darkening the image */
+    .cta-hero-btn {
+      background: rgba(168,146,116,0.92);
+      border-color: rgba(168,146,116,0.92);
+      color: #fff;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 12px 32px rgba(20,30,50,0.32);
+      padding: 1.15rem 2.6rem;
+    }
+    .cta-hero-btn:hover {
+      background: #A89274;
+      border-color: #A89274;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="bg-warm-wh">
+
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC95HBQ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      <a href="index.html" class="logo-link flex-shrink-0 group" aria-label="株式会社ロイヤルエクスペリエンス トップへ">
+        <img src="images/LX_logo.png"
+             alt="LOYAL EXPERIENCE 株式会社ロイヤルエクスペリエンス"
+             width="155" height="57"
+             loading="eager"
+             decoding="async">
+      </a>
+      <nav class="hidden lg:flex items-center gap-5">
+        <a href="index.html#about"      class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">About</a>
+        <a href="index.html#business02" class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Inbound</a>
+        <a href="index.html#business01" class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Marketing</a>
+        <a href="index.html#company"    class="nav-link font-sans-en text-[0.7rem] tracking-[0.22em] uppercase text-white/75 hover:text-white transition-colors">Company</a>
+        <a href="#inquiry"
+           class="border border-gold text-gold hover:bg-gold hover:text-white font-sans-en text-[0.7rem] tracking-[0.22em] uppercase px-5 py-2.5 transition-all duration-300">
+          Contact
+        </a>
+      </nav>
+      <button id="hamburger" class="lg:hidden flex flex-col justify-center gap-[6px] w-8 h-8" aria-label="メニュー">
+        <span id="ham1" class="w-6 h-px bg-white block transition-all duration-300 origin-center"></span>
+        <span id="ham2" class="w-4 h-px bg-white block transition-all duration-300 ml-auto"></span>
+        <span id="ham3" class="w-6 h-px bg-white block transition-all duration-300 origin-center"></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="ナビゲーションメニュー">
+    <button id="close-menu" class="absolute top-6 right-7 text-white/50 hover:text-white text-3xl font-light leading-none" aria-label="閉じる">✕</button>
+    <a href="index.html#about"      class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">About</a>
+    <a href="index.html#business02" class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Inbound</a>
+    <a href="index.html#business01" class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Marketing</a>
+    <a href="index.html#company"    class="mobile-link font-serif-jp text-white text-2xl tracking-widest hover:text-gold transition-colors">Company</a>
+    <a href="#inquiry"              class="border border-gold text-gold px-10 py-3 font-sans-en text-sm tracking-widest uppercase hover:bg-gold hover:text-white transition-all duration-300">Contact</a>
+  </div>
+
+  <!-- Slim band above hero: back link -->
+  <div class="hero-topbar">
+    <a href="index.html#business02" class="back-to-home">Back to Experiences</a>
+  </div>
+
+  <!-- ═══ Hero — wide landscape image, no overlays ═══ -->
+  <section class="cruise-hero">
+    <div class="cruise-hero-bg" aria-hidden="true"></div>
+  </section>
+
+  <!-- Slim band below hero: reservation CTA -->
+  <div class="hero-ctabar">
+    <a href="mailto:info@loyalx.co.jp?subject=Setouchi%20Gustronomy%20Cruise%20Request%26Inquiry"
+       class="cta-btn cta-hero-btn">
+      メールで予約・問い合わせ
+      <span>→</span>
+    </a>
+  </div>
+
+  <!-- ═══ Overview ═══ -->
+  <section class="py-24 lg:py-32 bg-warm-wh">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div class="lg:col-span-6 reveal">
+          <span class="section-label mb-4">Setouchi Gastronomy Cruise</span>
+          <h2 class="font-serif-jp text-navy font-light leading-[1.3] mb-6"
+              style="font-size: clamp(1.75rem, 3.4vw, 2.6rem);">
+            瀬戸内ガストロノミー<br>
+            <span class="text-gold">クルーズ。</span>
+          </h2>
+          <div class="gold-line-left mb-6"></div>
+          <p class="font-serif-jp text-navy font-light leading-[1.7] mb-6"
+             style="font-size: clamp(1.05rem, 1.6vw, 1.25rem);">
+            直島の現代アートと、<br>
+            瀬戸内の豊かな海を満喫する。
+          </p>
+          <p class="font-sans-jp font-light text-neutral-600 leading-[2.05] text-[0.95rem] mb-5">
+            瀬戸内海に浮かぶ島々の間を、プライベートクルーズで静かに渡る。船上では地元食材を活かしたガストロノミー、寄港した島ではアートや暮らしにふれるローカルな体験を。
+          </p>
+          <p class="font-sans-jp font-light text-neutral-600 leading-[2.05] text-[0.95rem]">
+            観光ルートでは得られない、島時間のなかでゆっくり過ごすプレミアムな1泊2日。ご希望に応じて、日本人でも知らないユニークな秘島までお連れします。
+          </p>
+        </div>
+        <div class="lg:col-span-6 reveal rev-d1">
+          <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+            <img src="images/setouchi-cruise/05-boat.jpg"
+                 alt="カタマランのデッキで、多島美の瀬戸内海を眺めるゲスト"
+                 loading="lazy"
+                 class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Highlights (3 pillars) ═══ -->
+  <section class="py-20 lg:py-28 bg-cream">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-14 lg:mb-16 reveal">
+        <span class="section-label mb-3">Three Pillars</span>
+        <h2 class="font-serif-jp text-navy font-light leading-[1.3]"
+            style="font-size: clamp(1.7rem, 3vw, 2.4rem);">
+          このクルーズがもたらす、<span class="text-gold">3つの体験。</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-7">
+
+        <div class="pillar-card reveal">
+          <div class="pillar-img">
+            <img src="images/setouchi-cruise/02-naoshima.jpg" alt="直島の建築フレーム越しに広がる瀬戸内の景色" loading="lazy">
+          </div>
+          <div class="pillar-body">
+            <p class="font-sans-en text-gold/70 text-[0.6rem] tracking-[0.28em] uppercase mb-2">Art &amp; Culture</p>
+            <h3 class="font-serif-jp text-navy text-[1.1125rem] font-medium mb-3">島々のサイトスペシフィックアート</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.875rem] leading-relaxed">
+              直島の地中美術館・ベネッセハウス、豊島美術館、犬島精錬所美術館。島の風土と一体となったアート作品を、専属ガイドの解説とともにプライベートで鑑賞します。
+            </p>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal rev-d1">
+          <div class="pillar-img">
+            <img src="images/setouchi-cruise/04-scenery.jpg" alt="船上での寿司体験、シェフとゲスト" loading="lazy">
+          </div>
+          <div class="pillar-body">
+            <p class="font-sans-en text-gold/70 text-[0.6rem] tracking-[0.28em] uppercase mb-2">Gastronomy</p>
+            <h3 class="font-serif-jp text-navy text-[1.1125rem] font-medium mb-3">船上ガストロノミー</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.875rem] leading-relaxed">
+              島から島への移動中、船上でシェフによる特別コースをお楽しみいただきます。瀬戸内の魚介・柑橘・オリーブなど、地元食材が主役の唯一無二の食体験。
+            </p>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal rev-d2">
+          <div class="pillar-img">
+            <img src="images/setouchi-cruise/10-guests.jpg" alt="瀬戸内の島の集落と朝のカヤック" loading="lazy">
+          </div>
+          <div class="pillar-body">
+            <p class="font-sans-en text-gold/70 text-[0.6rem] tracking-[0.28em] uppercase mb-2">Local Experience</p>
+            <h3 class="font-serif-jp text-navy text-[1.1125rem] font-medium mb-3">島に息づくローカルな時間</h3>
+            <p class="font-sans-jp font-light text-neutral-500 text-[0.875rem] leading-relaxed">
+              豊島の棚田で日本食文化にふれ、島民と朝食を囲み、伝統食のディナーを味わう。観光では見えない島の営みにふれる、参加者の満足度が最も高い体験です。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Itinerary ═══ -->
+  <section id="itinerary" class="py-24 lg:py-32 bg-warm-wh">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="mb-14 lg:mb-16 reveal">
+        <span class="section-label mb-3">Sample Itinerary — 1 Night / 2 Days</span>
+        <h2 class="font-serif-jp text-navy font-light leading-[1.3]"
+            style="font-size: clamp(1.7rem, 3vw, 2.4rem);">
+          モデル日程<span class="text-gold"> — 1泊2日</span>
+        </h2>
+        <div class="gold-line-left mt-6"></div>
+      </div>
+
+      <div class="flex flex-col gap-8 lg:gap-10">
+
+        <!-- Day 1 -->
+        <div class="day-card reveal">
+          <div class="day-image" style="background-image:url('images/setouchi-cruise/08-art.jpg');"></div>
+          <div class="day-body">
+            <span class="day-label">Day 01</span>
+            <div class="day-num">01</div>
+            <h3 class="day-title">直島到着 — アート鑑賞と<br>ベネッセハウスでの滞在</h3>
+            <div class="day-schedule">
+              <div class="day-item"><span class="day-time">10:00</span><span>集合場所から直島へ移動（OP：ホテル送迎・ヘリ手配も可能）</span></div>
+              <div class="day-item"><span class="day-time">11:30 – 18:00</span><span>専属ガイド付きアート鑑賞（指定美術館 or おすすめルート／OPで美術館夜間貸切）</span></div>
+              <div class="day-item"><span class="day-time">20:00 –</span><span>ベネッセハウスで夕食 &amp; 宿泊</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card reverse reveal">
+          <div class="day-image" style="background-image:url('images/setouchi-cruise/07-yacht.jpg');"></div>
+          <div class="day-body">
+            <span class="day-label">Day 02</span>
+            <div class="day-num">02</div>
+            <h3 class="day-title">直島 → 犬島 → 豊島 → 帰港<br>島巡り＆船上ガストロノミー</h3>
+            <div class="day-schedule">
+              <div class="day-item"><span class="day-time">9:00 – 11:30</span><span>直島で朝のアート鑑賞（OP：9:00〜美術館早朝貸切）</span></div>
+              <div class="day-item"><span class="day-time">11:30 – 14:00</span><span>専用ヨットで犬島へ／犬島精錬所美術館鑑賞／船上ガストロノミー</span></div>
+              <div class="day-item"><span class="day-time">14:00 – 16:30</span><span>豊島へ／豊島美術館鑑賞、棚田で日本食文化体験</span></div>
+              <div class="day-item"><span class="day-time">16:30 –</span><span>高松港 or 宇野港へ帰港・解散（OP：ホテル送迎）</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="mt-10 font-sans-jp text-neutral-400 text-[0.8rem] leading-[1.9] text-center reveal">
+        ※ 一例です。滞在日数・寄港地・宿泊先・体験内容は、ご希望に応じて柔軟にカスタマイズいたします。
+      </p>
+
+      <div class="mt-14 flex justify-center reveal">
+        <a href="mailto:info@loyalx.co.jp?subject=Setouchi%20Gustronomy%20Cruise%20Request%26Inquiry"
+           class="cta-btn" style="background:#A89274;border-color:#A89274;color:#fff;">
+          このプランを予約・相談する
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Finale — single full-bleed image ═══ -->
+  <section class="relative overflow-hidden" style="height: clamp(360px, 62vh, 640px);">
+    <img src="images/setouchi-cruise/01-hero.jpg"
+         alt="カタマランのデッキから多島美の瀬戸内海を眺めるゲスト"
+         loading="lazy"
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,30,50,0.55) 0%, rgba(20,30,50,0.15) 45%, transparent 100%);"></div>
+    <div class="relative z-10 h-full max-w-screen-xl mx-auto px-6 lg:px-12 flex items-end pb-14 lg:pb-20">
+      <div class="max-w-xl reveal">
+        <span class="font-sans-en text-gold-lt/90 text-[0.62rem] tracking-[0.32em] uppercase mb-3 block">A Moment in Setouchi</span>
+        <p class="font-serif-jp text-white font-light leading-snug"
+           style="font-size: clamp(1.35rem, 2.6vw, 2rem);">
+          海の上でしか<br>
+          <span class="text-gold-lt">出会えない光景がある。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Terms / Info ═══ -->
+  <section class="py-24 lg:py-32 bg-warm-wh">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="mb-12 lg:mb-14 reveal">
+        <span class="section-label mb-3">Terms &amp; Conditions</span>
+        <h2 class="font-serif-jp text-navy font-light leading-[1.3]"
+            style="font-size: clamp(1.7rem, 3vw, 2.4rem);">
+          <span class="text-gold">プランの詳細</span>
+        </h2>
+        <div class="gold-line-left mt-6"></div>
+      </div>
+
+      <div class="info-grid reveal">
+        <div class="info-cell"><span class="info-label">Duration</span><span class="info-value">1泊2日〜（年末年始を除く）</span></div>
+        <div class="info-cell"><span class="info-label">Meeting Point</span><span class="info-value">岡山空港・岡山駅・高松空港のいずれか</span></div>
+        <div class="info-cell"><span class="info-label">Group Size</span><span class="info-value">2〜6名</span></div>
+        <div class="info-cell"><span class="info-label">Price</span><span class="info-value">70万円〜／人（3歳以下無料、4〜17歳半額）</span></div>
+        <div class="info-cell"><span class="info-label">Language</span><span class="info-value">英語（専門通訳ご希望の場合は＋30万円〜／英・中）</span></div>
+        <div class="info-cell"><span class="info-label">Booking Deadline</span><span class="info-value">入島希望日の45日前まで（リクエストベースでご相談承ります）</span></div>
+        <div class="info-cell"><span class="info-label">Payment</span><span class="info-value">申込時に10％／30日前に半額／7日前に全額（旅行会社・ホテルは請求書払い可）</span></div>
+        <div class="info-cell"><span class="info-label">Cancellation</span><span class="info-value">申込以降10%／30日前以降50%／7日前以降100%</span></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-8 reveal rev-d1">
+        <div class="incl-block">
+          <p class="font-sans-en text-gold text-[0.62rem] tracking-[0.28em] uppercase mb-4">What's Included</p>
+          <ul class="incl-list">
+            <li>集合場所から直島までの交通費</li>
+            <li>旅行期間中の飲食（有料ワイン・ウイスキー除く）</li>
+            <li>アート鑑賞入場料</li>
+            <li>専属ガイド（日常会話程度の英語）</li>
+            <li>宿泊費（直島＝ベネッセハウス確約、豊島＝一棟貸し旅館、他島＝島内宿泊施設）</li>
+            <li>カタマランヨットでのクルージング</li>
+            <li>船上ガストロノミー（シェフは指定できません）</li>
+          </ul>
+        </div>
+        <div class="incl-block">
+          <p class="font-sans-en text-neutral-400 text-[0.62rem] tracking-[0.28em] uppercase mb-4">Not Included / Optional</p>
+          <ul class="incl-list excluded">
+            <li>お客様宿泊ホテルまでの送迎（OPで対応可能）</li>
+            <li>ヘリコプター移動</li>
+            <li>専門通訳の手配（英・中／＋30万円〜）</li>
+            <li>プライベートシェフの料理分野指定（寿司・焼き鳥など）</li>
+            <li>有料ワイン・ウイスキー（現地リストからご選択）</li>
+            <li>美術館の早朝／夜間貸切</li>
+            <li>お土産品の購入代金</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Inquiry CTA ═══ -->
+  <section id="inquiry" class="py-24 lg:py-32 bg-greige">
+    <div class="max-w-screen-md mx-auto px-6 lg:px-12 text-center">
+      <span class="section-label mb-4 reveal">Inquiry</span>
+      <h2 class="font-serif-jp text-navy font-light leading-[1.35] mb-5 reveal rev-d1"
+          style="font-size: clamp(1.8rem, 3.4vw, 2.6rem);">
+        瀬戸内クルーズの<br>
+        <span class="text-gold">ご相談を承ります。</span>
+      </h2>
+      <div class="gold-line max-w-xs mx-auto mb-8 reveal rev-d1"></div>
+      <p class="font-sans-jp font-light text-neutral-600 text-[0.9rem] leading-[2] mb-10 reveal rev-d2">
+        日程・寄港地・宿泊先・体験内容はご希望に応じて柔軟にカスタマイズ可能。<br>
+        まずはお気軽にお問い合わせください。
+      </p>
+      <div class="reveal rev-d3 flex justify-center items-center">
+        <a href="mailto:info@loyalx.co.jp?subject=Setouchi%20Gustronomy%20Cruise%20Request%26Inquiry"
+           class="cta-btn">
+          メールで予約・問い合わせ
+          <span>→</span>
+        </a>
+      </div>
+      <p class="mt-8 font-sans-jp text-neutral-400 text-[0.78rem] leading-[1.8] reveal rev-d3">
+        info@loyalx.co.jp<br>
+        入島希望日の45日前までにお申込みください。リクエストベースでのご相談も承ります。
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="bg-cream border-t border-gold/20 pt-16 pb-10">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+      <div class="grid md:grid-cols-3 gap-10 mb-14">
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex flex-col leading-none mb-6 group">
+            <span class="font-serif-en text-[1.1rem] tracking-[0.22em] text-navy font-light group-hover:text-gold transition-colors">
+              LOYAL EXPERIENCE
+            </span>
+            <span class="font-sans-jp text-[0.62rem] text-gold tracking-[0.18em] mt-1 font-light">
+              株式会社ロイヤルエクスペリエンス
+            </span>
+          </a>
+          <p class="font-sans-jp font-light text-navy/50 text-xs leading-relaxed">
+            かちづくりカンパニー。<br>
+            マーケティングと体験で<br>
+            日本の価値を世界へ。
+          </p>
+        </div>
+        <div>
+          <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Navigation</p>
+          <ul class="space-y-3">
+            <li><a href="index.html#about"      class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">About Us</a></li>
+            <li><a href="index.html#business02" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">インバウンド富裕層体験事業</a></li>
+            <li><a href="index.html#business01" class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">マーケティング・DX支援</a></li>
+            <li><a href="index.html#company"    class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">会社概要・プロフィール</a></li>
+            <li><a href="#inquiry"              class="font-sans-jp font-light text-navy/50 hover:text-navy text-sm transition-colors">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-sans-en text-[0.65rem] text-gold/70 tracking-[0.28em] uppercase mb-6">Contact</p>
+          <a href="mailto:info@loyalx.co.jp" class="font-sans-jp font-light text-navy/50 hover:text-gold text-sm transition-colors block mb-3">
+            info@loyalx.co.jp
+          </a>
+          <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer"
+             class="font-sans-en text-navy/50 hover:text-gold text-sm transition-colors block">
+            https://loyalx.co.jp
+          </a>
+        </div>
+      </div>
+      <div class="gold-line"></div>
+      <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+        <p class="font-sans-en text-navy/40 text-xs">© 2026 Loyal Experience Co., Ltd. All rights reserved.</p>
+        <p class="font-sans-jp text-navy/40 text-xs">株式会社ロイヤルエクスペリエンス</p>
+      </div>
+      <div class="mt-4 pt-4 border-t border-navy/10">
+        <p class="font-sans-jp text-navy/40 text-[0.68rem] leading-relaxed tracking-wide text-center">
+          東京都知事登録旅行サービス手配業 第20591号
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a id="floating-cta"
+     href="mailto:info@loyalx.co.jp?subject=Setouchi%20Gustronomy%20Cruise%20Request%26Inquiry"
+     aria-label="Setouchi Gustronomy Cruise を予約・問い合わせする">
+    <svg class="cta-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="2" y="3" width="12" height="10" rx="1"/>
+      <path d="M2 4l6 5 6-5"/>
+    </svg>
+    <span>Request &amp; Inquiry</span>
+  </a>
+
+  <button id="back-to-top" aria-label="ページトップへ戻る">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 12V2M2 7l5-5 5 5" stroke="#fdfaf6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script>
+    // Header + floating CTA scroll behavior
+    const header = document.getElementById('header');
+    const btt = document.getElementById('back-to-top');
+    const fcta = document.getElementById('floating-cta');
+    // On this page, the hero doesn't fill the viewport top, so keep the header always in "scrolled" style
+    header.classList.add('scrolled');
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 500) btt.classList.add('visible'); else btt.classList.remove('visible');
+      // Show floating CTA once user has scrolled past the hero
+      if (y > (window.innerHeight * 0.5)) fcta.classList.add('visible');
+      else fcta.classList.remove('visible');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Back to top
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile menu
+    const menu = document.getElementById('mobile-menu');
+    document.getElementById('hamburger').addEventListener('click', () => {
+      menu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('close-menu').addEventListener('click', () => {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    }));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
