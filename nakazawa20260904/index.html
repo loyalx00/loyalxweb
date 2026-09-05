@@ -30,8 +30,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common/chrome.css">
 <style>
-  :root{--ink:#111;--ink2:#3a3a3a;--mute:#8a8a8a;--line:#e8e8e8;--read:680px;--wide:1240px}
+  :root{--ink:#111;--ink2:#3a3a3a;--mute:#8a8a8a;--line:#e8e8e8;--read:1020px;--wide:1240px}
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased}
   body{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;font-weight:400;line-height:2.05;letter-spacing:.02em;font-feature-settings:"palt" 1}
@@ -42,47 +43,6 @@
   .wide{max-width:var(--wide);margin:0 auto;padding:0 24px}
   .label{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
 
-  /* ===== 共通ヘッダー（本体サイトと同一デザイン） ===== */
-  :root{--navy-deep:#2A2F3A;--navy:#2F3645;--gold:#A89274;--warm:#fdfaf7;--foot-bg:#f4f0ea}
-  #site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navy-deep);border-bottom:1px solid rgba(168,146,116,.2)}
-  #site-header .inner{max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
-  #site-header .logo-img{width:140px;height:auto;max-height:46px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
-  #site-header nav{display:flex;align-items:center;gap:20px}
-  #site-header nav a{font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .3s}
-  #site-header nav a:hover{color:#fff}
-  #site-header nav a.cta{border:1px solid var(--gold);color:var(--gold);padding:10px 20px;transition:all .3s}
-  #site-header nav a.cta:hover{background:var(--gold);color:var(--navy-deep)}
-  #hamburger{display:none;flex-direction:column;justify-content:center;gap:6px;width:32px;height:32px;background:none;border:0;cursor:pointer;padding:0}
-  #hamburger span{display:block;height:1px;background:#fff;transition:all .3s}
-  #hamburger span:nth-child(1){width:24px}#hamburger span:nth-child(2){width:16px;margin-left:auto}#hamburger span:nth-child(3){width:24px}
-  #mobile-menu{display:none;position:fixed;inset:0;z-index:60;background:var(--navy-deep);flex-direction:column;align-items:center;justify-content:center;gap:32px}
-  #mobile-menu.open{display:flex}
-  #mobile-menu a{font-family:"Shippori Mincho",serif;color:#fff;font-size:1.5rem;letter-spacing:.1em}
-  #mobile-menu a.cta{border:1px solid var(--gold);color:var(--gold);padding:12px 40px;font-family:"Inter",sans-serif;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase}
-  #close-menu{position:absolute;top:24px;right:28px;background:none;border:0;color:rgba(255,255,255,.5);font-size:1.9rem;font-weight:300;line-height:1;cursor:pointer}
-  #close-menu:hover{color:#fff}
-  @media (max-width:1023px){#site-header nav{display:none}#hamburger{display:flex}}
-  body{padding-top:89px}
-  @media (max-width:1023px){body{padding-top:80px}}
-
-  /* ===== 共通フッター（本体サイトと同一デザイン） ===== */
-  #site-footer{margin-top:140px;background:var(--foot-bg);border-top:1px solid rgba(168,146,116,.2);padding:64px 24px 40px;line-height:1.8}
-  #site-footer .inner{max-width:1280px;margin:0 auto}
-  #site-footer .grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:56px}
-  @media (min-width:768px){#site-footer .grid{grid-template-columns:repeat(3,1fr)}}
-  #site-footer .brand-en{font-family:"Shippori Mincho",serif;font-size:1.1rem;letter-spacing:.22em;color:var(--navy);font-weight:300;display:block}
-  #site-footer .brand-jp{font-size:.62rem;color:var(--gold);letter-spacing:.18em;margin-top:4px;display:block;font-weight:300}
-  #site-footer .tagline{font-size:.75rem;color:rgba(47,54,69,.5);margin-top:24px;font-weight:300}
-  #site-footer .col-title{font-family:"Inter",sans-serif;font-size:.65rem;color:rgba(168,146,116,.7);letter-spacing:.28em;text-transform:uppercase;margin:0 0 24px}
-  #site-footer ul{list-style:none;margin:0;padding:0}
-  #site-footer ul li{margin-bottom:12px}
-  #site-footer ul a,#site-footer .contact a{font-size:.85rem;color:rgba(47,54,69,.5);font-weight:300;transition:color .3s}
-  #site-footer ul a:hover{color:var(--navy)}
-  #site-footer .contact a:hover{color:var(--gold)}
-  #site-footer .gold-line{height:1px;background:linear-gradient(to right,transparent,rgba(168,146,116,.4),transparent)}
-  #site-footer .bottom{margin-top:32px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;font-size:.75rem;color:rgba(47,54,69,.4)}
-  @media (min-width:768px){#site-footer .bottom{flex-direction:row}}
-  #site-footer .license{margin-top:16px;padding-top:16px;border-top:1px solid rgba(47,54,69,.1);text-align:center;font-size:.68rem;color:rgba(47,54,69,.4);letter-spacing:.05em}
 
   .hero{width:100%;height:92vh;min-height:520px;max-height:960px;overflow:hidden}
   .hero img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
@@ -91,10 +51,9 @@
   .title{max-width:var(--wide);margin:0 auto;padding:72px 32px 0}
   .title .over{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin:0 0 28px}
   .title h1{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(40px,8vw,112px);line-height:1.15;letter-spacing:-.01em;margin:0;max-width:16em}
-  .title .deck{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-top:48px;padding-top:28px;border-top:1px solid var(--ink)}
+  .title .deck{display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center;margin-top:48px;padding-top:28px;border-top:1px solid var(--ink)}
   .title .deck p{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(17px,1.8vw,22px);line-height:1.8;letter-spacing:.04em;margin:0}
-  .title .by{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);line-height:2.2;text-align:right}
-  @media (max-width:720px){.title .deck{grid-template-columns:1fr;gap:20px}.title .by{text-align:left}}
+  .title .by{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);line-height:2.2;text-align:center}
   .cap{margin-top:14px;font-size:12px;letter-spacing:.06em;color:var(--mute);line-height:1.8}
 
   .sq img{aspect-ratio:1/1;object-fit:cover;width:100%}
@@ -102,7 +61,7 @@
   .lede p{font-family:"Shippori Mincho",serif;font-size:clamp(18px,2vw,22px);line-height:2.1;letter-spacing:.04em;margin:0 0 1.2em}
 
   .ch{padding:120px 0 0}
-  .ch h2{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(30px,4.6vw,56px);line-height:1.35;letter-spacing:.02em;margin:0 0 56px}
+  .ch h2{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(22px,2.8vw,34px);line-height:1.5;letter-spacing:.02em;margin:0 0 48px}
   .ch h2 .n{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.3em;color:var(--mute);margin-bottom:22px}
   .ch p{font-size:16px;color:var(--ink2);margin:0 0 1.6em}
   .qa p{margin:0 0 1.6em}
@@ -137,32 +96,7 @@
 </head>
 <body>
 
-<header id="site-header">
-  <div class="inner">
-    <a href="/" aria-label="株式会社ロイヤルエクスペリエンス トップへ">
-      <img src="../images/LX_logo.png" alt="LOYAL EXPERIENCE 株式会社ロイヤルエクスペリエンス" class="logo-img" width="155" height="57" loading="eager" decoding="async">
-    </a>
-    <nav>
-      <a href="/#about">About</a>
-      <a href="/#business02">Inbound</a>
-      <a href="/#business01">Marketing</a>
-      <a href="/#news">News</a>
-      <a href="/#company">Company</a>
-      <a href="/#contact" class="cta">Contact</a>
-    </nav>
-    <button id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="ナビゲーションメニュー">
-  <button id="close-menu" aria-label="閉じる">✕</button>
-  <a href="/#about">About</a>
-  <a href="/#business02">Inbound</a>
-  <a href="/#business01">Marketing</a>
-  <a href="/#news">News</a>
-  <a href="/#company">Company</a>
-  <a href="/#contact" class="cta">Contact</a>
-</div>
+<div id="common-header"></div>
 
 <div class="hero"><img src="assets/img/hero-portrait.jpg" alt="栗沢の畑に立つ中澤和行さん"></div>
 
@@ -206,7 +140,7 @@
 </div></section>
 
 <section class="ch"><div class="read">
-  <h2><span class="n">02</span>収量が減る年に、<br>あえて寝かせる</h2>
+  <h2><span class="n">02</span>抗えないことが、毎年起こる</h2>
   <div class="qa">
     <p class="a"><b>中澤</b>ふつうは、その年のワインはその年のうちに全部売ってしまいます。本当は少し寝かせてから出せれば一番いいんですが、そこまでの金銭的な余裕はない。去年造ったものはどんどん売るしかなかった。</p>
     <p><b>清水</b>今年はどうされるんですか。</p>
@@ -289,51 +223,7 @@
   </div>
 </section>
 
-<footer id="site-footer">
-  <div class="inner">
-    <div class="grid">
-      <div>
-        <a href="/">
-          <span class="brand-en">LOYAL EXPERIENCE</span>
-          <span class="brand-jp">株式会社ロイヤルエクスペリエンス</span>
-        </a>
-        <p class="tagline">かちづくりカンパニー。<br>マーケティングと体験で<br>日本の価値を世界へ。</p>
-      </div>
-      <div>
-        <p class="col-title">Navigation</p>
-        <ul>
-          <li><a href="/#about">About Us</a></li>
-          <li><a href="/#business02">インバウンド富裕層体験事業</a></li>
-          <li><a href="/#business01">マーケティング・DX支援</a></li>
-          <li><a href="/#news">ニュース・イベント</a></li>
-          <li><a href="/#company">会社概要・プロフィール</a></li>
-          <li><a href="/#contact">お問い合わせ</a></li>
-        </ul>
-      </div>
-      <div class="contact">
-        <p class="col-title">Contact</p>
-        <a href="mailto:info@loyalx.co.jp" style="display:block;margin-bottom:12px">info@loyalx.co.jp</a>
-        <a href="https://loyalx.co.jp" target="_blank" rel="noopener noreferrer" style="display:block">https://loyalx.co.jp</a>
-        <div style="margin-top:32px">
-          <p class="col-title" style="margin-bottom:12px">Group Company</p>
-          <p style="font-size:.75rem;color:rgba(47,54,69,.5);font-weight:300;margin:0">株式会社テンプルステイ</p>
-        </div>
-      </div>
-    </div>
-    <div class="gold-line"></div>
-    <div class="bottom">
-      <p style="font-family:'Inter',sans-serif;margin:0">© 2025 Loyal Experience Co., Ltd. All rights reserved.</p>
-      <p style="margin:0">株式会社ロイヤルエクスペリエンス</p>
-    </div>
-    <div class="license">東京都知事登録旅行サービス手配業 第20591号</div>
-  </div>
-</footer>
-
-<script>
-  const ham=document.getElementById('hamburger'),menu=document.getElementById('mobile-menu');
-  ham.addEventListener('click',()=>menu.classList.add('open'));
-  document.getElementById('close-menu').addEventListener('click',()=>menu.classList.remove('open'));
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-</script>
+<div id="common-footer"></div>
+<script src="/common/chrome.js" defer></script>
 </body>
 </html>

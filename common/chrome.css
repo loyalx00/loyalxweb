@@ -1,0 +1,47 @@
+/* ═══ loyalx.co.jp 共通ヘッダー・フッター（サブページ用） ═══
+   本体トップ（index.html）と同一デザイン。
+   使い方: <link rel="stylesheet" href="/common/chrome.css"> + /common/chrome.js を読み込む */
+
+:root{--navy-deep:#2A2F3A;--navy:#2F3645;--gold:#A89274;--warm:#fdfaf7;--foot-bg:#f4f0ea}
+
+/* ── Header ── */
+#site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navy-deep);border-bottom:1px solid rgba(168,146,116,.2)}
+#site-header .inner{max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+#site-header .logo-img{width:140px;height:auto;max-height:46px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
+#site-header nav{display:flex;align-items:center;gap:20px}
+#site-header nav a{font-family:"Inter",sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .3s;text-decoration:none}
+#site-header nav a:hover{color:#fff}
+#site-header nav a.cta{border:1px solid var(--gold);color:var(--gold);padding:10px 20px;transition:all .3s}
+#site-header nav a.cta:hover{background:var(--gold);color:var(--navy-deep)}
+#hamburger{display:none;flex-direction:column;justify-content:center;gap:6px;width:32px;height:32px;background:none;border:0;cursor:pointer;padding:0}
+#hamburger span{display:block;height:1px;background:#fff;transition:all .3s}
+#hamburger span:nth-child(1){width:24px}#hamburger span:nth-child(2){width:16px;margin-left:auto}#hamburger span:nth-child(3){width:24px}
+#mobile-menu{display:none;position:fixed;inset:0;z-index:60;background:var(--navy-deep);flex-direction:column;align-items:center;justify-content:center;gap:32px}
+#mobile-menu.open{display:flex}
+#mobile-menu a{font-family:"Shippori Mincho",serif;color:#fff;font-size:1.5rem;letter-spacing:.1em;text-decoration:none}
+#mobile-menu a.cta{border:1px solid var(--gold);color:var(--gold);padding:12px 40px;font-family:"Inter",sans-serif;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase}
+#close-menu{position:absolute;top:24px;right:28px;background:none;border:0;color:rgba(255,255,255,.5);font-size:1.9rem;font-weight:300;line-height:1;cursor:pointer}
+#close-menu:hover{color:#fff}
+@media (max-width:1023px){#site-header nav{display:none}#hamburger{display:flex}}
+body{padding-top:89px}
+@media (max-width:1023px){body{padding-top:80px}}
+
+/* ── Footer ── */
+#site-footer{margin-top:140px;background:var(--foot-bg);border-top:1px solid rgba(168,146,116,.2);padding:64px 24px 40px;line-height:1.8}
+#site-footer a{text-decoration:none}
+#site-footer .inner{max-width:1280px;margin:0 auto}
+#site-footer .grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:56px}
+@media (min-width:768px){#site-footer .grid{grid-template-columns:repeat(3,1fr)}}
+#site-footer .brand-en{font-family:"Shippori Mincho",serif;font-size:1.1rem;letter-spacing:.22em;color:var(--navy);font-weight:300;display:block}
+#site-footer .brand-jp{font-size:.62rem;color:var(--gold);letter-spacing:.18em;margin-top:4px;display:block;font-weight:300}
+#site-footer .tagline{font-size:.75rem;color:rgba(47,54,69,.5);margin-top:24px;font-weight:300}
+#site-footer .col-title{font-family:"Inter",sans-serif;font-size:.65rem;color:rgba(168,146,116,.7);letter-spacing:.28em;text-transform:uppercase;margin:0 0 24px}
+#site-footer ul{list-style:none;margin:0;padding:0}
+#site-footer ul li{margin-bottom:12px}
+#site-footer ul a,#site-footer .contact a{font-size:.85rem;color:rgba(47,54,69,.5);font-weight:300;transition:color .3s}
+#site-footer ul a:hover{color:var(--navy)}
+#site-footer .contact a:hover{color:var(--gold)}
+#site-footer .gold-line{height:1px;background:linear-gradient(to right,transparent,rgba(168,146,116,.4),transparent)}
+#site-footer .bottom{margin-top:32px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;font-size:.75rem;color:rgba(47,54,69,.4)}
+@media (min-width:768px){#site-footer .bottom{flex-direction:row}}
+#site-footer .license{margin-top:16px;padding-top:16px;border-top:1px solid rgba(47,54,69,.1);text-align:center;font-size:.68rem;color:rgba(47,54,69,.4);letter-spacing:.05em}
